@@ -1,63 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fullscreen Slider Example</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
 
-<body>
-    <nav id="nav" class="nav">navigation</nav>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <nav id="nav" class="nav">
+      <img class="sozial" src="./assets/img/facebook.png" alt="" />
+      <img class="sozial" src="./assets/img/instagram.png" alt="" />
+      kollektion aktuell werkstatt wissenswertes händler kontakt
+
+      <div class="row">
+        <input type="checkbox" id="hamburg" />
+        <label for="hamburg" class="hamburg">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </label>
+      </div>
+    </nav>
     <div id="allin" class="allin">
-    <div id="hero-slider">
+      <div id="hero-slider">
         <div id="logo" class="mask">
-            <span class="logo-text masked">claudia schüller design</span>
+          <!-- <span class="logo-text masked">claudia schüller design</span>-->
         </div>
-        <div class="logox"><img src="./assets/img/logo4.svg" alt=""></div>
+        <div class="logox"><img src="./assets/img/logo4.svg" alt="" /></div>
         <div id="slideshow">
-            <div id="slides-main" class="slides">
-                <div class="slide" data-index="0">
-                    <div class="abs-mask">
-                        <div class="slide-image" style="background-image: url(./assets/img/slide-1.jpg)"></div>
-                    </div>
-                </div>
-                <div class="slide" data-index="1">
-                    <div class="abs-mask">
-                        <div class="slide-image" style="background-image: url(./assets/img/slide-2.jpg)"></div>
-                    </div>
-                </div>
-                <div class="slide" data-index="2">
-                    <div class="abs-mask">
-                        <div class="slide-image" style="background-image: url(./assets/img/slide-3.jpg)"></div>
-                    </div>
-                </div>
-                <div class="slide" data-index="3">
-                    <div class="abs-mask">
-                        <div class="slide-image" style="background-image: url(./assets/img/slide-4.jpg)"></div>
-                    </div>
-                </div>
+          <div id="slides-main" class="slides">
+            <div class="slide" data-index="0">
+              <div class="abs-mask">
+                <div
+                  class="slide-image"
+                  style="background-image: url(./assets/img/slide-1.jpg)"
+                ></div>
+              </div>
             </div>
-            <div id="slides-aux" class="slides mask">
-                <h2 class="slide-title slide" data-index="0"><a href="#">kollektion1</a></h2>
-                <h2 class="slide-title slide" data-index="1"><a href="#">unendlich</a></h2>
-                <h2 class="slide-title slide" data-index="2"><a href="#">butterfly</a></h2>
-                <h2 class="slide-title slide" data-index="3"><a href="#">kolobri</a></h2>
+            <div class="slide" data-index="1">
+              <div class="abs-mask">
+                <div
+                  class="slide-image"
+                  style="background-image: url(./assets/img/slide-2.jpg)"
+                ></div>
+              </div>
             </div>
+            <div class="slide" data-index="2">
+              <div class="abs-mask">
+                <div
+                  class="slide-image"
+                  style="background-image: url(./assets/img/slide-3.jpg)"
+                ></div>
+              </div>
+            </div>
+            <div class="slide" data-index="3">
+              <div class="abs-mask">
+                <div
+                  class="slide-image"
+                  style="background-image: url(./assets/img/slide-4.jpg)"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div id="slides-aux" class="slides mask">
+            <h2 class="slide-title slide" data-index="0">
+              <a href="#">kollektion1</a>
+            </h2>
+            <h2 class="slide-title slide" data-index="1">
+              <a href="#">unendlich</a>
+            </h2>
+            <h2 class="slide-title slide" data-index="2">
+              <a href="#">butterfly</a>
+            </h2>
+            <h2 class="slide-title slide" data-index="3">
+              <a href="#">kolobri</a>
+            </h2>
+          </div>
         </div>
-        <div id="info">
+        <!-- <div id="info">
             <div class="slider-title-wrapper">
                 <span class="line"></span>
-                <h1 class="slider-title">
+                <h5 class="slider-title">
                     <span>kollektions</span>
-                </h1>
+                </h5>
             </div>
             <div class="about">
                 <p>
@@ -67,23 +102,54 @@
                     repo on <a href="https://schueller-design.de" target="_blank">moderne trauringe</a>
                 </p>
             </div>
-        </div>
+        </div>-->
         <nav id="slider-nav">
-            <span class="current">01</span>
-            <span class="sep"></span>
-            <span class="total">04</span>
+          <span class="current">01</span>
+          <span class="sep"></span>
+          <span class="total">04</span>
         </nav>
-    </div>
-    <div id="container" class="container">
+      </div>
+      <div id="container" class="container">
         <h1>In der mitte der Welt</h1>
-        Ist Schmuck handgearbeiteten Schmuck von Claudia Schüller der Rahmen für Erreignisse von Dauer und Wert. 
-        Recycelte Edelmetalle geschmiedet und kreativ und mit höchster Kunst bearbeitet, besetzt mit ausgesuchten
-        Diamanten aus zertifizierten Quellen, verbindet die preisgekrönte Designerin und Goldschmiedin die 
-        Schönheit der Natur und die Schönheit der Diamanten zu einem einzigartigen Design. Poetischer Schmuck, 
-        der eine Geschichte erzählt – mit Liebe und Verstand gemacht!
-    </div>
-</div>
-    <script src="./assets/js/main.js"></script>
-</body>
+        Ist Schmuck handgearbeiteten Schmuck von Claudia Schüller der Rahmen für
+        Erreignisse von Dauer und Wert. Recycelte Edelmetalle geschmiedet und
+        kreativ und mit höchster Kunst bearbeitet, besetzt mit ausgesuchten
+        Diamanten aus zertifizierten Quellen, verbindet die preisgekrönte
+        Designerin und Goldschmiedin die Schönheit der Natur und die Schönheit
+        der Diamanten zu einem einzigartigen Design. Poetischer Schmuck, der
+        eine Geschichte erzählt – mit Liebe und Verstand gemacht!
+      </div>
+   
 
+    <div class="container2">
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img src="../bbb_grid/assets/img/5curves.jpg"alt="Gallery image 1"class="gallery__img"/>
+          <figcaption>aktuelles</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="../bbb_grid/assets/img/a.webp" alt="Gallery image 2" class="gallery__img" />
+          <figcaption>werksatt</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img src="../bbb_grid/assets/img/blatt_art.jpg" alt="Gallery image 3" class="gallery__img" />
+          <figcaption>wissenswertes</figcaption>
+        </figure>
+       
+        <figure class="gallery__item gallery__item--4">
+          <img src="../bbb_grid/assets/img/goldhand.jpg" alt="Gallery image 4" class="gallery__img" />
+          <figcaption>kontakt</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img src="../bbb_grid/assets/img/nessing.jpg" alt="Gallery image 5" class="gallery__img" />
+          <figcaption>messen</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img src="../bbb_grid/assets/img/pinch.jpg" alt="Gallery image 6" class="gallery__img" />
+          <figcaption>The Day</figcaption>
+        </figure>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>

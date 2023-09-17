@@ -92,12 +92,12 @@ mark {
 }
 
 code,kbd,pre,samp {
-    font-family: 'courier new',monospace;
+    font-family: "Nunito", sans-serif;
     font-size: 1em
 }
 
 .sidebar .ui-button-close,body {
-    font-family: Courier,'Corier New',monospace
+    font-family: "Nunito", sans-serif;
 }
 
 pre {
@@ -2759,7 +2759,7 @@ body.fallback::after {
 }
 
 .-text-heading,.-text-title {
-    font-family: Georgia,serif;
+    font-family: "Nunito", sans-serif;
     font-size: 48px;
     line-height: 1.125;
     font-weight: 400;
@@ -2777,7 +2777,7 @@ body.fallback::after {
 }
 
 .-text-subheading {
-    font-family: Georgia,serif;
+    font-family: "Nunito", sans-serif;
     font-size: 1.125rem;
     font-weight: 400
 }
