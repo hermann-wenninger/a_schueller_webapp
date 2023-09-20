@@ -58,6 +58,7 @@ body{
   img {
     max-width: 100%;
     height: auto;
+    opacity:0.9;
   }
   
   
@@ -127,6 +128,8 @@ body{
     justify-content: center;
     align-items: center;
     color:dimgray;
+    scale:1.0;
+    transition:  scale 111.0 !important;
   }
   /* line 50, D:/WEB/Projects/Slider/assets/scss/style.scss */
   #slides-main, #slides-main:after, #slides-main .slide-image, #slides-main .abs-mask, #slides-main .slide {
