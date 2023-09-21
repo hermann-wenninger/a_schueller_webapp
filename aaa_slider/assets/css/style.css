@@ -275,7 +275,7 @@ a:hover {
   z-index: 9999;
 }
 #nav.nav {
-  position: absolute;
+  position: fixed;
   display: flex;
   top: 0;
   left: 0;
