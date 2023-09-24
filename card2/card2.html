@@ -26,7 +26,9 @@ h1 {
   margin: 1rem;
   font-weight: bold;
 }
-
+figure{
+  border: solid black 1px;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +66,8 @@ h1 {
   figure figcaption {
     height: 50px;
     font-size: 3em;
-    color:rgba(236, 241, 241, 0.531)
+    color:rgba(236, 241, 241, 0.531);
+   
   }
   figure:hover figcaption {
     position: absolute;
@@ -106,10 +109,57 @@ img figure{
     
   }
 }*/
+.grid.animation {
+	-webkit-animation: grid 5.5s ;
+	        animation: grid 5.5s ;
+}
+@-webkit-keyframes grid {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+    justify-content: space-around;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  }
+  50% {
+    scale:1.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    justify-content: center;
+  }
+}
+@keyframes grid {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+    justify-content: space-around;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  }
+  50% {
+    scale:1.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    justify-content: center;
+  }
+}
+
     </style>
 </head>
 <body>
-    <div class="grid">
+    <div class="grid animation">
       <figure>
         <img src="http://127.0.0.1:5501/assets\img\kollekt\ringe-kollektion_belle_de_nuit-schueller_design.png" alt="Mountains">
         <figcaption>belle_de_nuit</figcaption>
@@ -192,5 +242,6 @@ img figure{
         <figcaption>wüerfelsolitaer</figcaption>
     </figure>  
 		</div>
+    <script src="script.js"></script>
 </body>
 </html>
