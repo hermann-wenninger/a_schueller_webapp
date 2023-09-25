@@ -5147,7 +5147,7 @@
   li.active > .u-button-style.u-button-style.u-white,
   li.active > .u-button-style.u-button-style.u-white[class*="u-border-"] {
     color: #111111 !important;
-    background-color: #e6e6e6 !important;
+    background-color: #d43c1e !important;
   }
   .u-hover-white:hover,
   .u-hover-white[class*="u-border-"]:hover,
@@ -5185,7 +5185,7 @@
   .u-container-layout.u-container-layout.u-black:before,
   .u-table-alt-black tr:nth-child(even) {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #ce184e;
   }
   .u-input.u-black,
   .u-field-input.u-black,
