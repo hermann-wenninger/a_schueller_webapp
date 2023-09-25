@@ -289,6 +289,9 @@ a:hover {
   align-items: center;
   color:dimgray;
 }
+#nav.nav:hover {
+  box-shadow: 0 15px 15px rgba(0,0,0,0.3);
+}
 /* line 50, D:/WEB/Projects/Slider/assets/scss/style.scss */
 #slides-main, #slides-main:after, #slides-main .slide-image, #slides-main .abs-mask, #slides-main .slide {
   position: absolute;

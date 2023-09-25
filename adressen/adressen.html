@@ -110,8 +110,12 @@ p {
     align-items: center;
     color:dimgray;
     z-index: 99999;
-    /*background-image: url(../assets/img/beifang/backnav.png);*/
-  }
+    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out; 
+}
+#nav.nav:hover {
+  box-shadow: 0 15px 15px rgba(0,0,0,0.3);
+}
   .logos{
   z-index: 99999;
 }
