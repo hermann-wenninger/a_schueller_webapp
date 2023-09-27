@@ -71,7 +71,8 @@ h1 {
 }
 
 .navlink{
-  margin:1em;
+  margin:.3em;
+  font-family: monospace;
 }
 .container2 {
   width: 98%;
