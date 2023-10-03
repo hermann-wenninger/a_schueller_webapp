@@ -1,5 +1,8 @@
 body{
-    background-color: cornflowerblue;
+  background-color: #f9faf7;
+}
+img.navlog {
+  width: 270px;
 }
 .sozial{
     width:1.4em;
@@ -58,7 +61,7 @@ body{
   img {
     max-width: 100%;
     height: auto;
-    opacity:0.9;
+    
   }
   
   
@@ -78,6 +81,7 @@ body{
     color: inherit;
     text-decoration: none;
     outline: none;
+    color:black;
   }
   
    body{
@@ -129,7 +133,10 @@ body{
     align-items: center;
     color:dimgray;
     scale:1.0;
-    transition:  scale 111.0 !important;
+   
+    background-image: url(../assets/img/deko/background.jpg);
+    background-position: 0cm;
+    background-size: cover;
   }
   /* line 50, D:/WEB/Projects/Slider/assets/scss/style.scss */
   #slides-main, #slides-main:after, #slides-main .slide-image, #slides-main .abs-mask, #slides-main .slide {
