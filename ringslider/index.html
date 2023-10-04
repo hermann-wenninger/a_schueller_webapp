@@ -39,11 +39,10 @@ img {vertical-align: middle;}
     align-items: center;
     flex-wrap: nowrap;
     margin:1em;
+    transition: margin .9s;
 
 }
-,prev{
-    background-color: aquamarine;
-}
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
@@ -110,6 +109,23 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px;
 margin:.9em;}
 }
+a.next.xc{
+    margin: 12em;
+    -webkit-transition: margin 1s linear;
+    -khtml-transition: margin 1s linear;
+    -moz-transition: margin 1s linear;
+    -ms-transition: margin 1s linear;
+    transition: margin 12s linear;
+}
+a.prev.xc {
+    margin: 12em;
+    padding:2em;
+    -webkit-transition: margin 1s linear;
+    -khtml-transition: margin 1s linear;
+    -moz-transition: margin 1s linear;
+    -ms-transition: margin 1s linear;
+    transition: padding 12s linear;
+}
 </style>
 </head>
 <body>
@@ -134,8 +150,8 @@ margin:.9em;}
   <div class="text">Caption Three</div>
 </div>
 
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+<a class="prev xc" onclick="plusSlides(-1)">❮</a>
+<a class="next xc" onclick="plusSlides(1)">❯</a>
 
 </div>
 <br>
