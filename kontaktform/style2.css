@@ -58387,7 +58387,7 @@ a.u-button-style.u-border-20 {
 .u-radius-20:before,
 .u-radius-20 .u-background-effect,
 .u-radius-20:not(.u-hover-box) > .u-container-layout {
-  border-radius: 20px !important;
+  border-radius: 5px !important;
 }
 .u-top-left-radius-20,
 .u-top-left-radius-20:before,

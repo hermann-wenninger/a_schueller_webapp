@@ -23,7 +23,7 @@
   }
   .u-body {
     color: #111111;
-    background-color: #c6c8cb;
+    background-color: #ffffff;
     --effect-scale: 1.1;
   }
   /*end-variables color*/
@@ -5185,7 +5185,7 @@
   .u-container-layout.u-container-layout.u-black:before,
   .u-table-alt-black tr:nth-child(even) {
     color: #ffffff;
-    background-color: #ce184e;
+    background-color: #2196f3;
   }
   .u-input.u-black,
   .u-field-input.u-black,
@@ -9414,8 +9414,9 @@
   .u-border-white.u-input,
   .u-border-white.u-field-input.u-field-input,
   .u-separator-white:after {
-    border-color: #ffffff;
+    border-color: red;
     stroke: #ffffff;
+    
   }
   .u-button-style.u-border-white {
     border-color: #ffffff !important;

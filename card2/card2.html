@@ -8,6 +8,7 @@
         @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500");
 body {
   background-color: aliceblue;
+  font-family: monospace;
 }
 
         :root {
@@ -15,7 +16,7 @@ body {
 }
 
 section {
-  font-family: "Quicksand" sans-serif;
+  font-family: monospace;
   margin: 0 auto;
   max-width: 700px;
   width: 100%;
@@ -308,6 +309,9 @@ figcapture:hover{
   opacity: 1;
     transition: opacity 0.5s ease-in 0.6s;
 }
+.toggle-state:checked ~ .indicator {
+    transform: translate3d(25%, 0, 0);
+}
       </style>
 </head>
 <body>
@@ -356,7 +360,7 @@ figcapture:hover{
       <a href="../ringslider/index.html"> <figcaption><p>feenring</p></figcaption></a>
     </figure>  <figure>
        <img src="../assets\img\kollekt\ringe-kollektion_gerollt-schueller_design.png" alt="Mountains">
-        <a href="../ringslider/index.html"> <figcaption>gerollty</figcaption></a>
+        <a href="../ringslider/index.html"> <figcaption><p>gerollty</p></figcaption></a>
     </figure> 
     <figure>
         <img src="../assets\img\kollekt\ringe-kollektion_helin-schueller_design-1.png" alt="Mountains">

@@ -64,7 +64,7 @@
 
 
 h1 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: monospace;
   font-size: 3em;
   margin-bottom: .5em;
   color:#f60707;
@@ -248,7 +248,7 @@ a:hover {
  
 
  body{
-  font-family: "Space Grotesk", sans-serif;
+  font-family: monospace;
   color: #030303;
 }
 #container.container{
