@@ -6,6 +6,12 @@
     <title>Document</title>
 
       <style>
+        body {
+    font-family: monospace;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
         #nav.nav {
         position: fixed;
         display: flex;
@@ -17,7 +23,8 @@
         opacity: 0.7;
         z-index: 9999;
         flex-direction: row;
-        justify-content: center;
+        
+        justify-content: flex-start;
         align-items: center;
         color: dimgray;
         /*background-image: url(../assets/img/deko/gelberle.jpg);*/
@@ -128,6 +135,7 @@
     }
     .navlog{
         width: 250px;
+        margin-left: 1em;
     }
     a.navlink:hover {
     color: black;
@@ -178,23 +186,29 @@ a.navlink {
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: rgb(243, 81, 12);
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+.prev, .next {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: 20px;
+    height: 20px;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(243, 81, 12);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .prev{
   margin-left: 300px;
+  transition: all 1sec;
 }
 
 /* Position the "next button" to the right */
@@ -271,8 +285,70 @@ img.center{
   flex-direction: row;
   justify-content: center; 
 }
+.beschreib{
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+  div.caption-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.glyphicon {
+    color: orangered;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: .23em;
+}
+button.butt {
+    display: flex;
+    width: auto;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 25px;
+    margin-left: 2em;
+    position: absolute;
+    right:180px;
+    align-items: center;
+    height: 35px;
+    opacity: .7;
+    
+}
+button.butt:hover{
+  opacity: 1.0;
+}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot');
+  src: url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.text {
+    max-width: 550px;
+}
+.wrapper{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
         </style>
-       
+        
+  
 </head>
 <body>
   <nav id="nav" class="nav">
@@ -346,7 +422,7 @@ img.center{
 
   <!-- Image text -->
   <div class="caption-container">
-    <p id="caption"></p>
+    <p id="caption">></p><button class="butt"> <span class="glyphicon">&#xe085;</span>any question ... kontakt me</button>
   </div>
 
   <!-- Thumbnail images -->
@@ -369,6 +445,29 @@ img.center{
     </div>
   
   </div>
+</div>
+</div>
+<div class="wrapper">
+<div class="beschreib">
+<div class="text">
+ <h1>Marvel</h1> 
+<h2>Tresor- Eheringe mit Ihrer Gravur verborgen im Ring</h2>
+<p>Dieser Ring gehört zu den Lieblingsstücken der Designerin Claudia Schüller.
+</p>
+<div class="ltxt">Wie ein Zauber wirkt die Liebesbotschaft.
+  Wie eine geheime Formel wird sie beschützt.
+  Im Inneren liegt sie verschlossen.
+  Den Liebenden ist sie gewiss!</div>   
+
+<h2>Ring Variationen</h2>
+<div class="ltxt">
+  Erhältlich in Edelstahl oder Gelbgold*, Weißgold*, Roségold*, Rotgold*, Platin und Palladium, in Kombination mit Edelstahl.(*14 und 18 Karat)
+Wählen Sie schöne Farbkombinationen von z. B. warmen Aprikotgold (Roségold) und edlem Platin.
+Diese Designer-Ringe sind in verschiedenen Breiten erhältlich.
+</div>
+
+Sie haben Fragen zur Kollektion Marvel?
+</div>
 </div>
 </div>
     <script src="script1.js"></script>
