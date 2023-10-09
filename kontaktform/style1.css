@@ -3,6 +3,7 @@ body{
     background-repeat:no-repeat !important;   
     background-position: top left;
     background-color: black;
+    background-size: cover;
 }
 
 
