@@ -271,9 +271,10 @@ a:hover {
   position: absolute;
   display: block;
   top:63%;
-  left:63%;
+  right:100px;
   width: 30%;
-  z-index: 9999;
+  z-index: 29;
+  min-width: 250px;
 }
 #nav.nav {
   position: fixed;

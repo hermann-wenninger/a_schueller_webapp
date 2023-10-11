@@ -108,6 +108,110 @@
       margin-inline: 9px;
     }
   </style>
+  <style>
+   .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 1);
+      background-color: rgba(255, 255, 255, 1);
+      background-color: rgba(255, 255, 255, 1);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+    
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 1em;
+      color: #0606068d;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+      color: #020202;
+    }
+    
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0.963);
+    border-radius: 50%;
+}
+    
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+    hr.hr{
+      height: 1px;
+      color: black;
+      width: 50%;
+    }
+    a.closebtn {
+    line-height: 1px;
+    font-size: 1em;
+    font-family: ui-sans-serif;
+}
+.undernav {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-size: .8em;
+}
+.left{
+  display: flex;
+  width: 48vw;
+  height: 40px;
+  background-color: aqua;
+  color: #020202;
+  align-items: center;
+    justify-content: center;
+}
+.right{
+  display: flex;
+  width: 48vw;
+  height: 40px;
+  background-color: rgba(127, 255, 212, 0.999)!important;
+  color:#020202;
+  align-items: center;
+  justify-content: center;
+}
+.right:hover {
+  color:rgb(0, 0, 0);
+  font-weight: 400;
+  scale:1.1;
+}
+.left:hover{
+  color:black;
+  font-weight: 400;
+  scale:1.05;
+}
+    </style>
+  
 </head>
 
 <body>
@@ -124,14 +228,33 @@
     <a class="navlink" href="../bbb_grid/foliodot.html">Werkstatt</a>
     <a class="navlink" href="../aktuelles/index.html">Wissenswertes</a>
     <a class="navlink" href="../adressen/adressen.html">Händler</a>
-
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="#">kollektion</a>
+        <hr class="hr">
+        <a href="#">aktuelles</a>
+        <hr class="hr">
+        <a href="#">kontakt</a>
+        <hr class="hr">
+        <a href="#">atelier</a>
+        <hr class="hr">
+        <a href="#">wissenswertes</a>
+        <hr class="hr">
+        <a href="#">händler</a>
+        <div class="undernav">
+          <div class="left">impressum</div>
+          <div class="right">agb's</div>
+        </div>
+      </div>
+    </div>
     <div class="row">
-      <input type="checkbox" id="hamburg" />
-      <label for="hamburg" class="hamburg">
+      <a href="javascript:void(0)" class="closebtn" onclick="openNav()"> <input type="checkbox" id="hamburg" />
+      <label for="hamburg" class="hamburg" id="hamburg">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
-      </label>
+      </label></a>
     </div>
     <label class="label">
       <div class="toggle">
@@ -489,6 +612,27 @@
       }
     </style>
     <script src="./assets/js/main.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+        document.getElementById("hamburg").style.display = "none";
+        let x = document.getElementsByClassName("line");
+        console.log(x);
+        for (let i = 0; i < x.length; i++) {
+  x[i].style.opacity = '0'
+}
+      }
+      
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+        let x = document.getElementsByClassName("line");
+        console.log(x);
+        for (let i = 0; i < x.length; i++) {
+  x[i].style.opacity = '1'
+}
+      }
+      
+      </script>
 </body>
 
 </html>
