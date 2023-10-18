@@ -1,5 +1,5 @@
 from django.db import models
-from shop.models import Product
+from shop.models import Ring
 
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
@@ -28,7 +28,7 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order,
                               related_name='items',
                               on_delete=models.CASCADE)
-    product = models.ForeignKey(Product,
+    product = models.ForeignKey(Ring,
                                 related_name='order_items',
                                 on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10,

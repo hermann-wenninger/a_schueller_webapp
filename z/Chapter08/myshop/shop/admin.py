@@ -1,15 +1,16 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Kollektion
+from .models import Ring
 
 
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+@admin.register(Kollektion)
+class KollektionAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug']
     prepopulated_fields = {'slug': ('name',)}
 
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+@admin.register(Ring)
+class RingAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'price',
                     'available', 'created', 'updated']
     list_filter = ['available', 'created', 'updated']

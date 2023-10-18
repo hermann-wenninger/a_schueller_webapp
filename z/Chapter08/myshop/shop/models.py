@@ -1,18 +1,16 @@
 from django.db import models
 from django.urls import reverse
 
-class Category(models.Model):
+class Kollektion(models.Model):
     name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200,
-                            unique=True)
+    slug = models.SlugField(max_length=200,unique=True)
+    image = models.ImageField(upload_to='kollektion/%Y/%m/%d',blank=True)
 
     class Meta:
         ordering = ['name']
-        indexes = [
-            models.Index(fields=['name']),
-        ]
-        verbose_name = 'category'
-        verbose_name_plural = 'categories'
+        indexes = [models.Index(fields=['name']),]
+        verbose_name = 'kollektion'
+        verbose_name_plural = 'kollektionen'
 
     def __str__(self):
         return self.name
@@ -22,13 +20,13 @@ class Category(models.Model):
                        args=[self.slug])
 
 
-class Product(models.Model):
-    category = models.ForeignKey(Category,
-                                 related_name='products',
+class Ring(models.Model):
+    category = models.ForeignKey(Kollektion,
+                                 related_name='rings',
                                  on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
-    image = models.ImageField(upload_to='products/%Y/%m/%d',
+    image = models.ImageField(upload_to='rings/%Y/%m/%d',
                               blank=True)
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10,

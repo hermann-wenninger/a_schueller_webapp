@@ -1,24 +1,25 @@
 from django.shortcuts import render, get_object_or_404
 from cart.forms import CartAddProductForm
-from .models import Category, Product
+from .models import Kollektion
+from .models import Ring
 
 
-def product_list(request, category_slug=None):
-    category = None
-    categories = Category.objects.all()
-    products = Product.objects.filter(available=True)
-    if category_slug:
-        category = get_object_or_404(Category, slug=category_slug)
-        products = products.filter(category=category)
+def product_list(request, kollektion_slug=None):
+    kollektion = None
+    kollektionen = Kollektion.objects.all()
+    ring = Ring.objects.filter(available=True)
+    if kollektion_slug:
+        kollektion = get_object_or_404(Kollektion, slug=kollektion_slug)
+        ring = ring.filter(kollektion=kollektion)
     return render(request,
                   'shop/product/list.html',
-                  {'category': category,
-                   'categories': categories,
-                   'products': products})
+                  {'kollektion': kollektion,
+                   'kollektionen': kollektionen,
+                   'rings': ring})
 
 
 def product_detail(request, id, slug):
-    product = get_object_or_404(Product,
+    product = get_object_or_404(Ring,
                                 id=id,
                                 slug=slug,
                                 available=True)
