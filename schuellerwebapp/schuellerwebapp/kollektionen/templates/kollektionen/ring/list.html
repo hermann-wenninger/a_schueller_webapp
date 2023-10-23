@@ -1,7 +1,7 @@
 {% extends "kollektionen/base.html" %}
 {% load static %}
 {% block title %}
-  {% if category %}{{ category.name }}{% else %}Products{% endif %}
+  {% if category %}{{ category.name }}{% else %}Kollektionen{% endif %}
 {% endblock %}
 {% block content %}
   <div id="sidebar">
@@ -15,6 +15,7 @@
         {% endif %}>
           <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
         </li>
+        <img src="{{ c.image.url }}">
       {% endfor %}
     </ul>
   </div>
@@ -32,4 +33,10 @@
       </div>
     {% endfor %}
   </div>
+  {% for x in categories %}
+ 
+ 
+    <a href="{{ x.get_absolute_url }}"><img src="{{ x.image.url }}"></a>
+ 
+{% endfor %}
 {% endblock %}
