@@ -37,3 +37,9 @@ def ring_detail(request, id, slug):
     return render(request,
                   'kollektionen/ring/detail.html',
                   {'product': product})
+
+def categories_m(request):
+    kollektion = Kollektion.objects.all()
+   
+  
+    return render(request, 'kollektion/ring/kollektion.html', {'kollektion': kollektion})

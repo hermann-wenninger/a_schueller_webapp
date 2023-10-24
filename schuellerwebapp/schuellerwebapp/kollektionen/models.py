@@ -18,7 +18,9 @@ class Kollektion(models.Model):
     def get_absolute_url(self):
         return reverse('kollektionen:ring_list_by_category',
                        args=[self.slug])
-    
+    @property
+    def get_products(self):
+         return Ring.objects.filter(kollektion=self.slug)
 
 class Ring(models.Model):
     category = models.ForeignKey(Kollektion,related_name='rings',on_delete=models.CASCADE)
