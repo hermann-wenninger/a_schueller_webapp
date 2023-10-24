@@ -1,0 +1,10 @@
+{% extends "kollektionen/base.html" %}
+{% load static %}
+{% block title %}
+ kollektion
+{% endblock %}
+{% block content %}
+{% for ring in rings %}
+{{ ring.name }}
+{% endfor%}
+{% endblock %}

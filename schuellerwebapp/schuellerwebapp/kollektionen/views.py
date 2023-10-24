@@ -29,6 +29,21 @@ def ring_list(request, category_slug=None):
                    'categories': categories,
                    'products': products})
 
+
+def ring_listx(request, category_slug=None):
+    category = None
+    categories = Kollektion.objects.all()
+    products = Ring.objects.filter(available=True)
+    if category_slug:
+        category = get_object_or_404(Kollektion, 
+                                     slug=category_slug)
+        products = products.filter(category=category)
+    return render(request,
+                  'kollektionen/ring/list1.html',
+                  {'category': category,
+                   'categories': categories,
+                   'products': products})
+
 def ring_detail(request, id, slug):
     product = get_object_or_404(Ring,
                                 id=id,
@@ -43,3 +58,9 @@ def categories_m(request):
    
   
     return render(request, 'kollektion/ring/kollektion.html', {'kollektion': kollektion})
+
+
+def get_rings(request):
+    kollektion = Kollektion.objects.all()
+    rings =  Ring.objects.filter(kollektion=kollektion.slug)
+    return render(request,'kollektion/ring/rings.html',{'rings':rings})

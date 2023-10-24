@@ -1,0 +1,173 @@
+{% extends "kollektionen/base.html" %}
+{% load static %}
+<link href="{% static "css/main.css" %}" rel="stylesheet">
+{% block title %}
+  {% if category %}{{ category.name }}{% else %}Kollektionen{% endif %}
+{% endblock %}
+{% block content %}
+
+  
+    <style>
+      @font-face{
+        font-family: "JustlefthandWeb W03 Regular";;
+        src: url("/static/css/a.eot");
+        src: url("/static/css/a.eot?#iefix")format("embedded-opentype"),
+        url("/static/css/a.woff")format("woff"),
+        url("/static/css/a.woff2")format("woff2"),
+        url("/static/css/a.ttf")format("truetype"),
+        url("/static/css/a.svg#JustlefthandWeb W03 Regular")format("svg");
+      font-weight:normal;
+      font-style:normal;
+      font-display:swap;
+      }
+
+      figcapture:hover{
+        opacity: 1;
+          transition: opacity 0.5s ease-in 0.6s;
+      }
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+      .grid figure {
+        margin: .1rem;
+        position: relative;
+      }
+      .grid figure figcaption {
+        background: #e44c5e;
+        bottom: 0;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        padding: 1rem;
+        -webkit-transition: all 0.2s cubic-bezier(1, 0.24, 0, 0.76);
+        overflow: hidden;
+        rotate: 270deg;
+        font-size: 1.3em;
+      }
+      .grid figure p {
+        margin-top: 0.5rem;
+      }
+      .grid img {
+        width: 300px;
+        height: 300px;
+        -o-object-fit: cover;
+           object-fit: cover;
+      }
+      
+      /*@media screen and (min-width: 701px) {*/
+        figure {
+          width: 300px;
+        }
+        figure figcaption {
+          height: 50px;
+          font-size: 3em;
+          color:rgba(236, 241, 241, 0.531);
+         
+        }
+        figure:hover figcaption {
+          position: absolute;
+          bottom: 0;
+          width: 300px;
+          height: 100%;
+          opacity: .7;
+          transition: height 0.5s ease-in;
+        }
+        figure:hover p {
+          opacity: 1;
+          transition: opacity 0.5s ease-in 0.6s;
+        }
+      
+        p {
+          font-family: JustlefthandWeb W03 Regular;
+          opacity: 0;
+          font-size: 1.4em;
+          font-weight:300;
+        }
+        figcaption{
+          opacity: 0.0;
+      
+        }
+        @media screen (min-width: 638px) {
+      img figure{
+        width:38vw;
+      }
+        }
+      /*@media screen and (max-width: 700px) {
+        figure {
+          width: 100%;
+        }
+      
+        p {
+          opacity: 1;
+        }
+      
+        figcaption {
+          height: auto;
+          opacity: .0;
+          
+        }
+      }*/
+      figure {
+        -webkit-animation: grid 1.5s ;
+                animation: grid 1.5s ;
+      }
+      @-webkit-keyframes grid {
+        0% {
+          -webkit-transform: scale(.950);
+                  transform: scale(.950);
+          
+          margin:25px;
+         
+        
+        }
+       
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          
+          margin:2px;
+          
+        }
+      }
+      @keyframes grid {
+        0% {
+          -webkit-transform: scale(.987);
+                  transform: scale(.987);
+          
+          margin:12px;
+        }
+        97%{
+          margin:2px;
+        }
+        98%{
+          margin:3px;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          
+          margin:2px;
+          
+        }
+      }
+      
+    </style>
+    <h3>Categories</h3>
+    
+  <p class="texto"><h1>Kollektions</h1></p>
+  <div class="grid animation">
+  {% for x in categories %}
+ 
+ <figure>
+   <img src="{{ x.image.url }}">
+   <a href="{{ x.get_absolute_url }}"> <figcaption><p>{{ x.slug }}<p></figcaption></a>
+ </figure>
+
+{% endfor %}
+</div>
+
+
+{% endblock %}
