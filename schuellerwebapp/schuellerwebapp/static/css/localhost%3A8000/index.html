@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+  Productsaaaaa
+</title>
+    <link href="/static/css/main.css" rel="stylesheet">
+    <style>
+      @font-face{
+        font-family: "JustlefthandWeb W03 Regular";;
+        src: url("a.eot");
+        src: url("a.eot?#iefix")format("embedded-opentype"),
+        url("a.woff")format("woff"),
+        url("a.woff2")format("woff2"),
+        url("a.ttf")format("truetype"),
+        url("a.eot")format("svg");
+      font-weight:normal;
+      font-style:normal;
+      font-display:swap;
+      }
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+         v2.0 | 20110126
+         hallodry
+         License: none (public domain)
+      */
+      
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed, 
+      figure, figcaption, footer, header, hgroup, 
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      /* end of reset */
+      /****************/
+      /****************/
+      /**start of nav**/
+      
+      #nav.nav {
+          position: fixed;
+          display: flex;
+          top: 0;
+          left: 0;
+          height: 86px;
+          width: 100%;
+          background-color: #fff;
+          opacity: 0.7;
+          z-index: 9999;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          color:dimgray;
+          box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        }
+        #nav.nav:hover {
+          box-shadow: 0 15px 15px rgba(0,0,0,0.3);
+        }
+        .navlink {
+          margin: 0.3em;
+          font-family: monospace;
+          color:black;
+          font-size: 1.1em;
+      }
+      .navlink:hover {
+        
+        color:rgb(62, 62, 63);
+      }
+      
+      a, a:visited, a:hover {
+          color: inherit;
+          text-decoration: none;
+          outline: none;
+      }
+      
+      /* toggle label */
+      .label {
+        scale:.9;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        color: #394a56;
+        display:flex;
+        flex-direction: row;
+      }
+      
+      .label-text {
+        margin-left: 2px;
+      }
+      
+      .toggle {
+        scale:0.75;
+        position:absolute;
+        align-items: 20px;
+        nav-right: calc(100% - 20px);
+        align-self: flex-end;
+        margin-left:5em;
+        
+        isolation: isolate;
+        position: relative;
+        height: 30px;
+        width: 60px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow:
+          -8px -4px 8px 0px #535151,
+          8px 4px 12px 0px #d1d9e6,
+          4px 4px 4px 0px #d1d9e6 inset,
+          -4px -4px 4px 0px #7c7a7a inset;
+      }
+      
+      .toggle-state {
+        display: none;
+      }
+      
+      
+      
+      .toggle-state:checked ~ .indicator {
+        transform: translate3d(25%, 0, 0);
+      }
+      
+      /****overlay******/
+      .overlay-content {
+        display: none;
+      }
+      
+      /******hamburger*******/
+      
+      
+      #hamburg {
+          scale: 0.4;
+          position: relative;
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+      }
+      #hamburg:checked + .hamburg .line:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+      }
+      .line:nth-child(1) {
+        top: 12px;
+      }
+      .line:nth-child(2) {
+        top: 24px;
+      }
+      .line:nth-child(3) {
+        top: 36px;
+      }
+      
+      
+      
+      .sozial {
+        width: 1.4em;
+        margin: 0.5em;
+      }
+      a, a:visited, a:hover {
+        color: inherit;
+        text-decoration: none;
+        outline: none;
+        font-family: monospace;
+      }
+      
+      input#hamburg {
+        display: none;
+      }
+      
+      label.hamburg {
+        display: block;
+        background: #ffffff00;
+        width: 75px;
+        height: 50px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 4px;
+        scale: 0.6;
+      }
+      
+      .line {
+        position: absolute;
+        left: 10px;
+        height: 4px;
+        width: 55px;
+        background: #2f2e2e;
+        border-radius: 2px;
+        display: block;
+        transition: 0.5s;
+        transform-origin: center;
+      }
+      .line:nth-child(2) {
+        top: 24px;
+      }
+      .line:nth-child(3) {
+        top: 36px;
+      }
+      .label {
+        scale: .9;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        color: #394a56;
+        display: flex;
+        flex-direction: row;
+      }
+      .toggle {
+        scale: 0.75;
+        position: absolute;
+        align-items: 20px;
+        nav-right: calc(100% - 20px);
+        align-self: flex-end;
+        margin-left: 5em;
+        isolation: isolate;
+        position: relative;
+        height: 30px;
+        width: 60px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: -8px -4px 8px 0px #535151, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #7c7a7a inset;
+      }
+      .toggle-state {
+        display: none;
+      }
+      .indicator {
+        height: 100%;
+        width: 200%;
+        background: #ecf0f3;
+        border-radius: 15px;
+        transform: translate3d(-75%, 0, 0);
+        transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+        box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      #hamburg:checked + .hamburg .line:nth-child(1){
+      transform: translateY(12px) rotate(-45deg);
+      }
+      
+      #hamburg:checked + .hamburg .line:nth-child(2){
+      opacity:0;
+      }
+      
+      #hamburg:checked + .hamburg .line:nth-child(3){
+      transform: translateY(-12px) rotate(45deg);
+      }
+      .navlog{
+        width: 250px;
+      }
+      a.navlink:hover {
+      color: black;
+      }
+      .texto{
+      position:absolute;
+      top:120px;
+      left:100px;
+      }
+      
+      p.x {
+      rotate: 270deg;
+      margin-top: 50px;
+      margin-right: 50px;
+      position: relative;
+      top: 110px;
+      left: -90px;
+      font-family: inherit;
+      font-size: .8em;
+      }
+      .navlogo{
+        width: 250px;
+        margin-right: 1em;
+        margin-left: -80px;
+        margin-left: 100px;
+      }
+      .lang{
+        font-family: monospace;
+        color:rgb(121, 123, 132);
+        font-size: 1em;
+      }
+      .language {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 150px;
+        align-content: center;
+        justify-content: center;
+      }
+      .label-text-de.lang {
+        margin-right: -70px;
+        font-weight: 700;
+        color: black;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <nav id="nav" class="nav">
+
+
+      
+      <img class="navlogo" src="/static/img/schueller_logo.png" alt="firmenlogo schueller-design" />
+        <a class="navlink" href="../card2/card2.html">Home</a>
+        <a class="navlink" href="../card2/card2.html">Kollektionen</a>
+        <a class="navlink" href="../aktuelles/index.html">Aktuell</a>
+        <a class="navlink" href="../kontaktform/kontaktform.html">Kontakt</a>
+        <a class="navlink" href="../bbb_grid/foliodot.html">Werkstatt</a>
+        <a class="navlink" href="../aktuelles/index.html">Wissenswertes</a>
+        <a class="navlink" href="../adressen/adressen.html">Händler</a>
+        <img class="sozial" src="/static/img/facebook.png" alt="" />
+        <img class="sozial" src="/static/img/instagram.png" alt="" />
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">kollektion</a>
+            <hr class="hr">
+            <a href="#">aktuelles</a>
+            <hr class="hr">
+            <a href="#">kontakt</a>
+            <hr class="hr">
+            <a href="#">atelier</a>
+            <hr class="hr">
+            <a href="#">wissenswertes</a>
+            <hr class="hr">
+            <a href="#">händler</a>
+            <div class="undernav">
+              <div class="left">impressum</div>
+              <div class="right">agb's</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="javascript:void(0)" class="closebtn" onclick="openNav()"> <input type="checkbox" id="hamburg" />
+          <label for="hamburg" class="hamburg" id="hamburg">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label></a>
+        </div>
+        
+      <div class="language">
+        <div class="label-text-de lang">de</div>
+        <label class="label">
+         
+          <div class="toggle">
+            <input class="toggle-state" type="checkbox" name="check" value="check" />
+            <div class="indicator"></div>
+          </div>
+          
+        </label>
+        <div class="label-text-eng lang">eng</div>
+      </div>
+      </nav>
+    <div id="subheader">
+      <div class="cart">
+        Your cart is empty.
+      </div>
+    </div>
+    <div id="content">
+      
+<style>
+  
+  @font-face{
+    font-family: "JustlefthandWeb W03 Regular";;
+    src: url("/static/css/a.eot");
+    src: url("/static/css/a.eot?#iefix")format("embedded-opentype"),
+    url("/static/css/a.woff")format("woff"),
+    url("/static/css/a.woff2")format("woff2"),
+    url("/static/css/a.ttf")format("truetype"),
+    url("/static/css/a.svg#JustlefthandWeb W03 Regular")format("svg");
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+  }
+
+  figcapture:hover{
+    opacity: 1;
+      transition: opacity 0.5s ease-in 0.6s;
+  }
+  .grid {
+    displ
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-top: 80px;
+  .grid figure {
+    margin: .1rem;
+    position: relative;
+  }
+  .grid figure figcaption {
+    background: #e44c5e;
+    bottom: 0;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    -webkit-transition: all 0.2s cubic-bezier(1, 0.24, 0, 0.76);
+    overflow: hidden;
+    rotate: 270deg;
+    font-size: 1.3em;
+  }
+  .grid figure p {
+    margin-top: 0.5rem;
+  }
+  .grid img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  /*@media screen and (min-width: 701px) {*/
+    figure {
+      width: 300px;
+    }
+    figure figcaption {
+      height: 50px;
+      font-size: 3em;
+      color:rgba(236, 241, 241, 0.531);
+     
+    }
+    figure:hover figcaption {
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      height: 100%;
+      opacity: .7;
+      transition: height 0.5s ease-in;
+    }
+    figure:hover p {
+      opacity: 1;
+      transition: opacity 0.5s ease-in 0.6s;
+    }
+  
+    p {
+      font-family: JustlefthandWeb W03 Regular;
+      opacity: 0;
+      font-size: 1.4em;
+      font-weight:300;
+    }
+    figcaption{
+      opacity: 0.0;
+  
+    }
+    @media screen (min-width: 638px) {
+  img figure{
+    width:38vw;
+  }
+    }
+  /*@media screen and (max-width: 700px) {
+    figure {
+      width: 100%;
+    }
+  
+    p {
+      opacity: 1;
+    }
+  
+    figcaption {
+      height: auto;
+      opacity: .0;
+      
+    }
+  }*/
+  figure {
+    -webkit-animation: grid 1.5s ;
+            animation: grid 1.5s ;
+  }
+  @-webkit-keyframes grid {
+    0% {
+      -webkit-transform: scale(.950);
+              transform: scale(.950);
+      
+      margin:25px;
+     
+    
+    }
+   
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      
+      margin:2px;
+      
+    }
+  }
+  @keyframes grid {
+    0% {
+      -webkit-transform: scale(.987);
+              transform: scale(.987);
+      
+      margin:12px;
+    }
+    97%{
+      margin:2px;
+    }
+    98%{
+      margin:3px;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      
+      margin:2px;
+      
+    }
+  }
+  
+
+  img{
+    border: none;
+  }
+</style>
+  
+<div class="grid animation">
+  <p><h1>Kollektionen</h1><p>
+      
+      <figure>
+         
+          <a href="/belle-de-nuit/"><img src="/media/kollektionen/2023/10/23/belle_de_nuit.png"></a>
+          <figcaption>Belle de nuit</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a hr
+    width:100vw;
+    font-size:2em;
+    font-family:monospace;
+    margin-top: 100px;
+    margin-left:100px;
+    margin-bottom: -25px;
+    z-index: 999;
+          <a href="/fairy-tale/"><img src="/media/kollektionen/2023/10/23/fairy_tale.png"></a>
+          <figcaption>Fairy tale</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/feenring/"><img src="/media/kollektionen/2023/10/23/feenring.png"></a>
+          <figcaption>Feenring</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/gerollt/"><img src="/media/kollektionen/2023/10/23/gerollt.png"></a>
+          <figcaption>Gerollt</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/happy/"><img src="/media/kollektionen/2023/10/23/happy-designer-eheringe-ausgefallen-gewickelt-1.png"></a>
+          <figcaption>Happy</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/helin/"><img src="/media/kollektionen/2023/10/23/helin.png"></a>
+          <figcaption>Helin</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/jolie/"><img src="/media/kollektionen/2023/10/23/jolie.png"></a>
+          <figcaption>Jolie</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/joy/"><img src="/media/kollektionen/2023/10/23/joy.png"></a>
+          <figcaption>Joy</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/kolibri/"><img src="/media/kollektionen/2023/10/23/Kolibri.png"></a>
+          <figcaption>Kolibri</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/lieblings-ring/"><img src="/media/kollektionen/2023/10/23/Lieblings-Ring.jpg"></a>
+          <figcaption>Lieblings Ring</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/luna/"><img src="/media/kollektionen/2023/10/23/luna.png"></a>
+          <figcaption>Luna</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/marvel/"><img src="/media/kollektionen/2023/10/23/ringe-kollektion_marvel-schueller_design-1.png"></a>
+          <figcaption>Marvel</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/nofretete/"><img src="/media/kollektionen/2023/10/23/nofretete.png"></a>
+          <figcaption>Nofretete</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/rosenrot/"><img src="/media/kollektionen/2023/10/23/rosenrot.png"></a>
+          <figcaption>Rosenrot</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/sign/"><img src="/media/kollektionen/2023/10/23/sign.png"></a>
+          <figcaption>Sign</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/timbre/"><img src="/media/kollektionen/2023/10/23/timbre.png"></a>
+          <figcaption>Timbre</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/trace/"><img src="/media/kollektionen/2023/10/23/trace.png"></a>
+          <figcaption>Trace</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/traumgewebe/"><img src="/media/kollektionen/2023/10/23/ringe-kollektion_traumgewebe-schueller_design.png"></a>
+          <figcaption>Traumgewebe</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/unendlich/"><img src="/media/kollektionen/2023/10/23/unendlich.png"></a>
+          <figcaption>Unendlich</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/venus/"><img src="/media/kollektionen/2023/10/23/venus.png"></a>
+          <figcaption>Venus</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/wilde-wellen/"><img src="/media/kollektionen/2023/10/23/wilde_wellen.png"></a>
+          <figcaption>Wilde Wellen</figcaption>
+      </figure>
+      
+      <figure>
+         
+          <a href="/wurfelsolitar/"><img src="/media/kollektionen/2023/10/23/wuerfelsolitaer.png"></a>
+          <figcaption>Würfelsolitär</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+  <div id="main" class="product-list">
+    <h1>Products</h1>
+    
+      <div class="item">
+        <a href="/3/butterfly-gelbgold-mit-gravur/">
+          <img src="/media/rings/2023/10/19/partnerring_butterfly-claudia_schueller_design-1.png">
+        </a>
+        <a href="/3/butterfly-gelbgold-mit-gravur/">Butterfly Gelbgold mit gravur</a>
+        <br>
+        $792.00
+      </div>
+    
+      <div class="item">
+        <a href="/2/butterfly-rotgold-brilliant/">
+          <img src="/media/rings/2023/10/19/butterfly-trauringe-rotgold-brillant-faires-gold.png">
+        </a>
+        <a href="/2/butterfly-rotgold-brilliant/">Butterfly Rotgold Brilliant</a>
+        <br>
+        $999.00
+      </div>
+    
+      <div class="item">
+        <a href="/1/design-1/">
+          <img src="/media/rings/2023/10/19/butterfly-eheringe-ausgefallen-gelbgold-gravur-.png">
+        </a>
+        <a href="/1/design-1/">Design 1</a>
+        <br>
+        $1000.00
+      </div>
+    
+      <div class="item">
+        <a href="/8/gewebe2/">
+          <img src="/media/rings/2023/10/19/ringe-kollektion_traumgewebe-schueller_design.png">
+        </a>
+        <a href="/8/gewebe2/">Gewebe2</a>
+        <br>
+        $555.00
+      </div>
+    
+      <div class="item">
+        <a href="/6/marvel-brilliant/">
+          <img src="/media/rings/2023/10/19/ringe-kollektion_marvel-schueller_design-1.png">
+        </a>
+        <a href="/6/marvel-brilliant/">Marvel Brilliant</a>
+        <br>
+        $2345.00
+      </div>
+    
+      <div class="item">
+        <a href="/4/marvel-design-1/">
+          <img src="/media/rings/2023/10/19/marvel-8ed-gold-3-ehering-ausgefallen-schueller-design-30xjw1lfilipa0cymmq32i.png">
+        </a>
+        <a href="/4/marvel-design-1/">Marvel Design 1</a>
+        <br>
+        $1234.00
+      </div>
+    
+      <div class="item">
+        <a href="/5/mervel-tresor/">
+          <img src="/media/rings/2023/10/19/marvel-8ed-wei%C3%9Fgold-ehering-ausgefallen.png">
+        </a>
+        <a href="/5/mervel-tresor/">Mervel Tresor</a>
+        <br>
+        $1245.00
+      </div>
+    
+      <div class="item">
+        <a href="/7/traumgewebe1/">
+          <img src="/media/rings/2023/10/19/ringe-kollektion_wilde_wellen-schueller_design-1.png">
+        </a>
+        <a href="/7/traumgewebe1/">Traumgewebe1</a>
+        <br>
+        $333.00
+      </div>
+    
+      <div class="item">
+        <a href="/9/gewebe-3/">
+          <img src="/media/rings/2023/10/19/ringe-kollektion_unendlich-schueller_design-1.png">
+        </a>
+        <a href="/9/gewebe-3/">gewebe 3</a>
+        <br>
+        $6661.00
+      </div>
+    
+  </div>
+
+    </div>
+  </body>
+</html>

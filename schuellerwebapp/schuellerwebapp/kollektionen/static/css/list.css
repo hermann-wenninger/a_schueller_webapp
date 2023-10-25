@@ -1,38 +1,17 @@
-{% extends "kollektionen/base.html" %}
-{% load static %}
 
-{% block title %}
-  {% if category %}{{ category.name }}{% else %}Kollektionen{% endif %}
-{% endblock %}
-<link href="{% static "css/list.css" %}" rel="stylesheet">
-
-{% block content %}
-<style>
-  
   @font-face{
     font-family: "JustlefthandWeb W03 Regular";;
     src: url("/static/css/a.eot");
     src: url("/static/css/a.eot?#iefix")format("embedded-opentype"),
-    url("../static/css/a.woff")format("woff"),
-    url("../static/css/a.woff2")format("woff2"),
-    url("../static/css/a.ttf")format("truetype"),
-    url("../static/css/a.svg#JustlefthandWeb W03 Regular")format("svg");
+    url("/static/css/a.woff")format("woff"),
+    url("/static/css/a.woff2")format("woff2"),
+    url("/static/css/a.ttf")format("truetype"),
+    url("/static/css/a.svg#JustlefthandWeb W03 Regular")format("svg");
   font-weight:normal;
   font-style:normal;
   font-display:swap;
   }
-  @font-face{
-    font-family: "JustlefthandWeb W03 Regular";;
-    src: url("../css/a.eot");
-    src: url("../css/a.eot?#iefix")format("embedded-opentype"),
-    url("../css/a.woff")format("woff"),
-    url("../css/a.woff2")format("woff2"),
-    url("../css/a.ttf")format("truetype"),
-    url("../css/a.svg#JustlefthandWeb W03 Regular")format("svg");
-  font-weight:normal;
-  font-style:normal;
-  font-display:swap;
-  }
+
   figcapture:hover{
     opacity: 1;
       transition: opacity 0.5s ease-in 0.6s;
@@ -42,8 +21,6 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    position: relative;
-    margin-top: 50px;
   }
   .grid figure {
     margin: .1rem;
@@ -172,37 +149,3 @@
   img{
     border: none;
   }
-  div.longline{
-    width:100vw;
-    font-size:2em;
-    font-family:monospace;
-    margin-top:150px;
-    margin-left:100px;
-  }
-</style>
-  
-<div class="grid animation">
-  <div class="longline"> <h1>Kollektionen</h1> </div>
-      {% for c in categories %}
-      <figure>
-         {% if category.slug == c.slug %}{% endif %}
-          <a href="{{ c.get_absolute_url }}"><img src="{{ c.image.url }}"></a>
-          <figcaption>{{ c.name }}</figcaption>
-      </figure>
-      {% endfor %}
-    </div>
-  </div>
-  <div id="main" class="product-list">
-    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
-    {% for product in products %}
-      <div class="item">
-        <a href="{{ product.get_absolute_url }}">
-          <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
-        </a>
-        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-        <br>
-        ${{ product.price }}
-      </div>
-    {% endfor %}
-  </div>
-{% endblock %}

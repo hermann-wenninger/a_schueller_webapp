@@ -1,0 +1,8 @@
+div#subheader {
+    display: none;
+}
+
+h1 {
+    font-family:  monospace;
+    font-size: 2em;
+}
