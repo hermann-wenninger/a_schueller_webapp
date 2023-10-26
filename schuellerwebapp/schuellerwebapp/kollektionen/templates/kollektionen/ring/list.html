@@ -4,7 +4,7 @@
 {% block title %}
   {% if category %}{{ category.name }}{% else %}Kollektionen{% endif %}
 {% endblock %}
-<link href="{% static "css/list.css" %}" rel="stylesheet">
+<link href="{% static "./css/list.css" %}" rel="stylesheet">
 
 {% block content %}
 <style>
@@ -50,7 +50,7 @@
     position: relative;
   }
   .grid figure figcaption {
-    background: #e44c5e;
+    background: #f8011e;
     bottom: 0;
     box-sizing: border-box;
     position: absolute;
@@ -88,6 +88,7 @@
       height: 100%;
       opacity: .7;
       transition: height 0.5s ease-in;
+      font-size: 2em;
     }
     figure:hover p {
       opacity: 1;
@@ -102,6 +103,9 @@
     }
     figcaption{
       opacity: 0.0;
+      font-family: JustlefthandWeb W03 Regular;
+      font-size: 2em;
+      font-weight: 600;
   
     }
     @media screen (min-width: 638px) {
@@ -172,13 +176,15 @@
   img{
     border: none;
   }
-  div.longline{
-    width:100vw;
-    font-size:2em;
-    font-family:monospace;
-    margin-top:150px;
-    margin-left:100px;
-  }
+  div.longline {
+    width: 100vw;
+    font-size: 2em;
+    font-family: monospace;
+    margin-top: 58px;
+    margin-left: 100px;
+    margin-bottom: -50px;
+    z-index: 888;
+}
 </style>
   
 <div class="grid animation">
@@ -186,23 +192,11 @@
       {% for c in categories %}
       <figure>
          {% if category.slug == c.slug %}{% endif %}
-          <a href="{{ c.get_absolute_url }}"><img src="{{ c.image.url }}"></a>
-          <figcaption>{{ c.name }}</figcaption>
+        <img src="{{ c.image.url }}">
+        <a href="{{ c.get_absolute_url }}"><figcaption>{{ c.name }}</figcaption></a>
       </figure>
       {% endfor %}
     </div>
   </div>
-  <div id="main" class="product-list">
-    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
-    {% for product in products %}
-      <div class="item">
-        <a href="{{ product.get_absolute_url }}">
-          <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
-        </a>
-        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-        <br>
-        ${{ product.price }}
-      </div>
-    {% endfor %}
-  </div>
+ 
 {% endblock %}

@@ -38,11 +38,14 @@ def ring_listx(request, category_slug=None):
         category = get_object_or_404(Kollektion, 
                                      slug=category_slug)
         products = products.filter(category=category)
+        count = products.count()
+        count = {i+1: i+1 for i in range(count)}
     return render(request,
                   'kollektionen/ring/list1.html',
                   {'category': category,
                    'categories': categories,
-                   'products': products})
+                   'products': products,
+                   'count':count})
 
 def ring_detail(request, id, slug):
     product = get_object_or_404(Ring,
