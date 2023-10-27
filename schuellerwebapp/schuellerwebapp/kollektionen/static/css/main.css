@@ -644,4 +644,6 @@ body{
   div#subheader {
     display: none;
 }
-</style>
+input:checked .label-text-eng .lang{
+  color:green;
+}

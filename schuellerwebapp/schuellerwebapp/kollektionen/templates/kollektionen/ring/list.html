@@ -4,7 +4,8 @@
 {% block title %}
   {% if category %}{{ category.name }}{% else %}Kollektionen{% endif %}
 {% endblock %}
-<link href="{% static "./css/list.css" %}" rel="stylesheet">
+<link href="{% static "kollektionen/css/list.css" %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href='{% static "/css/list.css" %}'>
 
 {% block content %}
 <style>
@@ -188,7 +189,7 @@
 </style>
   
 <div class="grid animation">
-  <div class="longline"> <h1>Kollektionen</h1> </div>
+  <div class="longline"> <h1>Kollektionen:</h1> </div>
       {% for c in categories %}
       <figure>
          {% if category.slug == c.slug %}{% endif %}

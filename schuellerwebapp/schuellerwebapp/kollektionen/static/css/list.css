@@ -11,8 +11,9 @@
   font-style:normal;
   font-display:swap;
   }
-.longline{
+div.longline{
   background-color: blue;
+  border: 1px black;
 }
   figcapture:hover{
     opacity: 1;

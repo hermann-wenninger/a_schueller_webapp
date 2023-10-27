@@ -2,7 +2,7 @@ body{
     background-color: rgb(43, 50, 232);
 }
 @font-face{
-    font-family: "JustlefthandWeb W03 Regular";;
+    font-family: "JustlefthandWeb W03 Regular";
     src: url("a.eot");
     src: url("a.eot?#iefix")format("embedded-opentype"),
     url("a.woff")format("woff"),
@@ -318,4 +318,6 @@ body{
     margin-right: -70px;
   }
   
-  
+  checkbox:checked .label-text-eng .lang{
+    color:green;
+  }
