@@ -4,8 +4,8 @@
 {% block title %}
   {% if category %}{{ category.name }}{% else %}Kollektionen{% endif %}
 {% endblock %}
-<link href="{% static "kollektionen/css/list.css" %}" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href='{% static "../../css/list.css" %}'>
+<link href="{% static "/css/list.css" %}" rel="stylesheet">
+
 
 {% block content %}
 <style>
@@ -106,6 +106,7 @@
  {% endfor %}
  <img class="navlogo" src="{% static "img/logo4.svg" %}" alt="firmenlogo schueller-design" />
  <object data="{% static "img/logo4.svg" %}" width="300" height="300"> </object>
+ <embed src="{% static "/img/logo4.svg" %}" />
   </div>
   <div style="text-align:center">
     <span class="dot"></span> 
