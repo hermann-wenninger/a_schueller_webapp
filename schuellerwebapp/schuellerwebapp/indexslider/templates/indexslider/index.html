@@ -91,13 +91,17 @@
     left:100px;
     z-index:999;
   }
+  @media only screen and (min-width: 400px) {
+    .mySlides.fade {
+     transform:rotate(360deg);
+   }
   </style>
   <div class="slideshow-container">
 
    
     
  {% for c in indexslider %}
- <div class="mySlides fade" style="background-image:url({{ c.image.url}})">
+ <div class="mySlides fade" style="background-image:url({{c.image.url}})">
   <div class="numbertext">1 / 3</div>
   <img src=""  style="width:vw" >
   <div class="text">{{ c.name }}</div>
@@ -109,9 +113,10 @@
  <embed src="{% static "/img/logo4.svg" %}" />
   </div>
   <div style="text-align:center">
+    {% for c in indexslider %}
     <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
+    {% endfor %}
+   
   </div>
   <script>
     let slideIndex = 0;

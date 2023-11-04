@@ -1,0 +1,24 @@
+{% extends "kollektionen/base.html" %}
+{% load static %}
+<link href="{% static "css/adressen.css" %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href='src="{% static "css/adressen.css" %}'>
+
+{% block title %}
+  Atelier
+{% endblock %}
+{% block content %}
+<style>
+ 
+</style>
+<div class="adressblock">
+{% for c in adressen %}
+<div class="adresse">
+<strong>{{c.name}}</strong><br>
+{{c.zip_code}} {{c.city}}<br>
+{{c.strasse}} {{c.hausnummer}}<br>
+Telefon: {{c.telefon}}<br>
+<italic><a href="{{c.webadresse}}">{{c.webadresse}}</a></italic><br>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

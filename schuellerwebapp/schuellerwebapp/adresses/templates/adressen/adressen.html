@@ -1,13 +1,20 @@
 {% extends "kollektionen/base.html" %}
 {% load static %}
 <link href="{% static "css/adressen.css" %}" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href='{% static "adresses/css/adressen.css" %}'>
+<link rel="stylesheet" type="text/css" href='src="{% static "css/adressen.css" %}'>
 
 {% block title %}
   Händleradressen
 {% endblock %}
 {% block content %}
 <style>
+  italic{
+    font-style:italic;
+  }
+  strong{
+    font-weight:600;
+    line-height:1.5;
+  }
   .adressblock {
     position: relative;
     display: flex;
@@ -18,26 +25,40 @@
     margin-top: 120px;
     width: 100vw;
     height: auto;
-    background-color:red;
+    background-color:#ffffff;
 }
 .adresse {
   width: 30vw;
-  background-color: #2569a6;
+  background-color: #dbe2e9;
   padding: 2vw;
   box-sizing: border-box;
   margin: 1vw;
   font-family: monospace;
   font-size: 1em;
-  color: aliceblue;
+  color: #0b2e4c;
+  box-shadow: 5px 5px 0px 0px #d1d9e629;
+  border-radius:4px;
 }
+
+@media only screen and (min-width: 701px) {
+  .adresse {
+   width: 45vw;
+   font-size:1.5em;
+   }
+   .adressblock{
+     justify-content:center;
+   }
+ }
+ 
 </style>
 <div class="adressblock">
 {% for c in adressen %}
 <div class="adresse">
-{{c.name}}<br>
-{{c.zip_code}}{{c.city}}<br>
-{{c.strasse}}{{c.hausnummer}}<br>
-{{c.webadresse}}
+<strong>{{c.name}}</strong><br>
+{{c.zip_code}} {{c.city}}<br>
+{{c.strasse}} {{c.hausnummer}}<br>
+Telefon: {{c.telefon}}<br>
+<italic><a href="{{c.webadresse}}">{{c.webadresse}}</a></italic><br>
 </div>
 {% endfor %}
 </div>
