@@ -1,4 +1,12 @@
+{% extends "kollektionen/base.html" %}
+{% load static %}
+<link href="{% static "css/adressen.css" %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href='src="{% static "css/adressen.css" %}'>
 
+{% block title %}
+  Atelier
+{% endblock %}
+{% block content %}
 
 <link rel="stylesheet" id="folio-css" href="../assets/css/folio.min.css">
 
@@ -134,6 +142,7 @@
         }
     } );
 </script>
+{% endblock %}
 
 
 
