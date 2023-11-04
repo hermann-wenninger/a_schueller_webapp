@@ -11,9 +11,11 @@ class Adressen(models.Model):
     zip_code = models.IntegerField(blank=True, null=True)
 
     city = models.CharField(max_length=255, blank=True)
-    strasse = models.CharField(max_lenght=255, blank=True)
+    strasse = models.CharField(max_length=255, blank=True)
     hausnummer = models.CharField(max_length=5, blank=True)
     country = CountryField(blank=True)
+    webadresse = models.URLField(max_length=200, blank=True)
+    telefon = models.CharField(max_length=25, blank=True)
     latitude = models.DecimalField(
         max_digits=9, decimal_places=6, blank=True, default='0')
     longitude = models.DecimalField(

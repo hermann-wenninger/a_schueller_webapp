@@ -1,0 +1,44 @@
+{% extends "kollektionen/base.html" %}
+{% load static %}
+<link href="{% static "css/adressen.css" %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href='{% static "adresses/css/adressen.css" %}'>
+
+{% block title %}
+  Händleradressen
+{% endblock %}
+{% block content %}
+<style>
+  .adressblock {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    margin-top: 120px;
+    width: 100vw;
+    height: auto;
+    background-color:red;
+}
+.adresse {
+  width: 30vw;
+  background-color: #2569a6;
+  padding: 2vw;
+  box-sizing: border-box;
+  margin: 1vw;
+  font-family: monospace;
+  font-size: 1em;
+  color: aliceblue;
+}
+</style>
+<div class="adressblock">
+{% for c in adressen %}
+<div class="adresse">
+{{c.name}}<br>
+{{c.zip_code}}{{c.city}}<br>
+{{c.strasse}}{{c.hausnummer}}<br>
+{{c.webadresse}}
+</div>
+{% endfor %}
+</div>
+{% endblock %}

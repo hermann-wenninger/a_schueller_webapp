@@ -22,6 +22,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('kollektionen.urls', namespace='kollektionen')),
     path('', include('indexslider.urls', namespace='indexslider')),
+    path('', include('adresses.urls', namespace='adresses'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
