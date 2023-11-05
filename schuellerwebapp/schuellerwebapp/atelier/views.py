@@ -3,6 +3,10 @@ from .models import EinleitungAtelier, BilderAtelier
 
 
 def atelier(request):
-    einat = EinleitungAtelier.objekts.all()
+    
     bilder = BilderAtelier.objects.all()
-    return render(request,'atelier/atelier.html',{'einat':einat, 'bilder':bilder})
+    return render(request,'atelier/atelierde.html',{'bilder':bilder})
+
+def indexslider(request):
+    indexslider = Index.objects.all()
+    return render(request,'indexslider/index.html',{'indexslider':indexslider})

@@ -1,0 +1,23 @@
+.adressblock {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    margin-top: 120px;
+    width: 100vw;
+    height: auto;
+    background-color: aqua;
+}
+.adresse {
+    width: 30vw;
+    background-color: #3ba625;
+    padding: 2vw;
+    box-sizing: border-box;
+    margin: 1vw;
+    font-family: monospace;
+    font-size: 1em;
+    color: rgb(19, 124, 216);
+    line-height: 4;
+  }

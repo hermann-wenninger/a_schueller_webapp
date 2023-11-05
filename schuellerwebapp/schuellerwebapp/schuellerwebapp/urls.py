@@ -23,7 +23,7 @@ urlpatterns = [
     path('', include('kollektionen.urls', namespace='kollektionen')),
     path('', include('indexslider.urls', namespace='indexslider')),
     path('', include('adresses.urls', namespace='adresses')),
-]   path('', include('atelier.urls',namespace='atelier')),
+    path('', include('atelier.urls',namespace='atelier')),]  
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)

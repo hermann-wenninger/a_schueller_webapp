@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "kollektionen",
     "indexslider",
     "adresses",
+    "atelier",
 ]
 
 MIDDLEWARE = [
