@@ -1,0 +1,39 @@
+    <html>
+        <head>
+            <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">          
+            
+            <!-- jQuery -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
+          
+            <!-- nanogallery2 -->
+            <link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+            <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+        </head>
+        <body>
+        
+              <h1>gallery made with nanogallery2</h1>
+
+              <!-- ### position of the gallery ### -->
+              <div id="nanogallery2">gallery_made_with_nanogallery2</div>
+            
+              <script>
+                 jQuery(document).ready(function () {
+
+                    jQuery("#nanogallery2").nanogallery2( {
+                        // ### gallery settings ### 
+                        thumbnailHeight:  150,
+                        thumbnailWidth:   150,
+                        itemsBaseURL:     '127.0.0.1:5502',
+                        
+                        // ### gallery content ### 
+                        items: [
+                            { src: '../aaa_slider/assets/img/slide-2.jpg', srct: './aaa1.png', title: 'Berlin 1' },
+                            { src: '../aaa_slider/assets/img/slide-2.jpg', srct: 'aaa1.png', title: 'Berlin 2' },
+                            { src: '../aaa_slider/assets/img/slide-1.jpg', srct: 'aaa1.png', title: 'Berlin 3' }
+                          ]
+                      });
+                  });
+              </script>
+
+          </body>
+      </html>

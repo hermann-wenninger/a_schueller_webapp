@@ -1,12 +1,11 @@
-{% extends "kollektionen/base.html" %}
+{% extends "base.html" %}
 {% load static %}
 <link id="folio-css" href="{% static "css/atelier.css" %}" rel="stylesheet">
 
 
-<script src="{% static '/script/atelier.js' %}"></script> 
 
 {% block title %}
-  Atelier
+  Atelierxxxx
 {% endblock %}
 {% block content %}
 
@@ -28,94 +27,24 @@ Verliebt – verlobt – verheiratet. Anlässe, die Verbundenheit ausdrücken un
         </div>
     </article>
 
-
+    <img src="/media/atelier/ring_mit_lic.jpg" transition="left-scale" style="position:absolute;top:66px"/>
    
     {% for c in bilder %}
-    <img src="{{c.image.url}}"alt="{{c.beschreibung}}" fit="cover right" transition="left-scale"/>
+    <img src="{{c.image.url}}"alt="{{c.beschreibung}}"style="position:absolute;top:66px"/>
     {% endfor %}
   
 
     
 
-    <article hash="about-images" transition="scale-left">
-        <h3>About images</h3>
-        <p>
-            schüller design:
-        </p>
-        <p>
-            More info: <br/>
-            
-        </p>
-        <p>
-            Credit: <br/>
-            
-        </p>
-        <p>
-            Source: <br/>
-            
-        </p>
-        <p>
-            Edit: <br/>
-            schueller-design.de
-        </p>
-    </article>
+  
 
     
-    <article self="size-xlarge" transition="fold-left" hash="next">
-        <div layout="row top-stretch spacing-5" >
-            <article class="-cph-3">
-                <h3 class="-mb-3 -color-red">More examples</h3>
-                <a href="/examples/portraits" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Portraits</h5>
-                  
-                </a>
-                <a href="/examples/1910" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Photo essay</h5>
-                    <p></p>
-                </a>
-                <a href="/examples/narrative" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Creative layout</h5>
-                    <p></p>
-                </a>
-                <a href="/examples/standard" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Standard photobook</h5>
-                    <p></p>
-                </a>
-                <a href="/examples/basic" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Basic slideshow</h5>
-                    <p></p>
-                </a>
-            </article>
-            <article class="-cph-3">
-                <h3 class="-mb-3 -color-red">More guides</h3>
-                <a href="/examples/layout/photo" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Single photo layout</h5>
-                    <p></p>
-                </a>
-                <a href="/examples/layout/diptych" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Diptych layout</h5>
-                    <p></p>
-                </a>
-                <a href="/examples/transitions" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Transitions</h5>
-                    <p></p>
-                </a>
-                <a href="/examples/thumbnails" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Thumbnails</h5>
-                    <p></p>
-                </a>
-                <a href="/examples/sidebar" class="-border-none -hover-bg-grey200 -cmv-2 -pv-2">
-                    <h5>Sidebar</h5>
-                    <p></p>
-                </a>
-            </article>
-        </div>
-    </article>
+ 
 </main>
 
 
 
-
+<script src="{% static '/script/atelier.js' %}"></script> 
 
 <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -143,6 +72,21 @@ Verliebt – verlobt – verheiratet. Anlässe, die Verbundenheit ausdrücken un
         }
     } );
 </script>
+
+<style>
+    .ui.ui-button.ui-button-section {
+        z-index: 9999 !important;
+        position: fixed;
+        bottom: 40px;
+        left: 90px;
+    }
+    .ui.ui-button.ui-button-views {
+        z-index: 9999 !important;
+        position: fixed;
+        bottom: 40px;
+        left: 50px;
+    }
+</style>
 {% endblock %}
 
 

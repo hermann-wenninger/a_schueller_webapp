@@ -9779,3 +9779,29 @@ function(t, e, i) {
         }
     }
 }(document, window.FOLIO = window.FOLIO || {});
+
+
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-55129573-1', 'auto');
+    ga('send', 'pageview');
+    ga('require', 'linker');
+    ga('linker:autoLink', ['fastspring.com']);
+
+    FOLIO.init( {
+        project : {
+            pagination : false,
+            views : 'normal contain'
+        },
+        thumbnails : {
+            size : '270x180',
+            fit : 'contain'
+
+        },
+        content : {
+            inactivity : true,
+            transition : 'scale-up',
+            ui: 'icon'
+        }
+    } );
+
+    

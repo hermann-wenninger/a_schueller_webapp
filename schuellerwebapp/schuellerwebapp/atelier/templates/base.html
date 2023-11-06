@@ -4,8 +4,9 @@
   <head>
     <meta charset="utf-8" />
     <title>{% block title %}My shop{% endblock %}</title>
-    <link href="{% static "css/main.css" %}" rel="stylesheet">
-    
+    <link href="{% static "css/mainx.css" %}" rel="stylesheet">
+    <link id="folio-css" href="{% static "css/atelier.css" %}" rel="stylesheet">
+    <script src="{% static '/script/atelier.js' %}"></script> 
 
    
   </head>
@@ -66,13 +67,7 @@
         <div class="label-text-eng lang">eng</div>
       </div>
       </nav>
-    <div id="subheader">
-      <div class="cart">
-        Your cart is empty.
-      </div>
-    </div>
-    <div id="content">
-      {% block content %}
+ {% block content %}
       {% endblock %}
     </div>
   </body>

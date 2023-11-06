@@ -1,87 +1,4 @@
-/*!
- * Foliodot
- * Website a la photo book
- * FILE:     folio.min.js
- * VERSION:  0.6.2
- * DATE:     2018-02-27
- * URL:      https://foliodot.com
- * LICENSE:  Copyright 2018. Progressivered doo. All rights reserved. This work is subject to the terms at https://foliodot.com/legal/eula
- * AUTHOR:   Stefan Kovac <stef@progressivered.com> (http://progressivered.com/)
- **/
 
-/*!
- * VERSION: 0.14.3
- * DATE: 2015-12-19
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * Requires TweenLite and CSSPlugin version 1.17.0 or later (TweenMax contains both TweenLite and CSSPlugin). ThrowPropsPlugin is required for momentum-based continuation of movement after the mouse/touch is released (ThrowPropsPlugin is a membership benefit of Club GreenSock - http://greensock.com/club/).
- *
- * @license Copyright (c) 2008-2016, GreenSock. All rights reserved.
- * This work is subject to the terms at http://greensock.com/standard-license or for
- * Club GreenSock members, the software agreement that was issued with your membership.
- * 
- * @author: Jack Doyle, jack@greensock.com
- */
-
-/*!
- * VERSION: 0.14.6
- * DATE: 2016-04-26
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * Requires TweenLite and CSSPlugin version 1.17.0 or later (TweenMax contains both TweenLite and CSSPlugin). ThrowPropsPlugin is required for momentum-based continuation of movement after the mouse/touch is released (ThrowPropsPlugin is a membership benefit of Club GreenSock - http://greensock.com/club/).
- *
- * @license Copyright (c) 2008-2016, GreenSock. All rights reserved.
- * This work is subject to the terms at http://greensock.com/standard-license or for
- * Club GreenSock members, the software agreement that was issued with your membership.
- * 
- * @author: Jack Doyle, jack@greensock.com
- */
-
-/*!
- * Mousetrap is a simple keyboard shortcut library for Javascript with
- * no external dependencies
- * Copyright 2013 Craig Campbell
- * @version 1.4.6
- * @url craig.is/killing/mice
- */
-
-/*!
- * https://github.com/laktek/extract-values
- * by Lakshan Perera <lakshan@web2media.net> (http://laktek.com)
- * Copyright (c) 2012 Lakshan Perera
- * Licensed under the MIT license.
- */
-
-/*!
- * Copyright (c) 2010,2011,2012,2013,2014 Morgan Roderick http://roderick.dk
- * License: MIT - http://mrgnrdrck.mit-license.org
- * https://github.com/mroderick/PubSubJS
-*/
-
-/*!
- * Grapnel.js
- * https://github.com/EngineeringMode/Grapnel.js
- *
- * @author Greg Sabia Tucker <greg@artificer.io>
- * @link http://artificer.io
- * @version 0.5.8
- *
- * Released under MIT License. See LICENSE.txt or http://opensource.org/licenses/MIT
-*/
-
-/*!
- * enquire.js v2.1.1 - Awesome Media Queries in JavaScript
- * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/enquire.js
- * License: MIT (http://www.opensource.org/licenses/mit-license.php)
- */
-
-/*!https://github.com/d4nyll/lethargy
- *  Distinguish between scroll events initiated by the user, and those by inertial scrolling
- * /
-
-/*!
- * lazysizes - v0.4 -  Licensed MIT
- */
 var _gsScope;
 !function(t, e, i, n) {
     ("visibilityState"in e || "webkitVisibilityState"in e || "mozVisibilityState"in e) && "?fallback" !== t.location.search || function() {
@@ -9779,3 +9696,10 @@ function(t, e, i) {
         }
     }
 }(document, window.FOLIO = window.FOLIO || {});
+
+const xyzht = document.querySelector('.ui.ui-button.ui-button-views')
+xyzht.style.position = 'fixed';
+xyzht.style.zIndex = 99999;
+xyzht.style.left = 100 + 'px';
+xyzht.style.bottom = .1 + 'em';
+xyzht.style.display = 'flex';
