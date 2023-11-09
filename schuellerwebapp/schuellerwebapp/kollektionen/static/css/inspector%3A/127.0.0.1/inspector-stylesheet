@@ -1,4 +1,9 @@
-.thumb.thumb-5.photo {
+img.logo_z {
+    position: fixed;
+    top: 60vh;
+    left: 55vw;
+    width: 38%;
+}img.navlogo {}.thumb.thumb-5.photo {
     /* visibility: visible; */
     /* display: contents; */
     /* z-index: 999999; */

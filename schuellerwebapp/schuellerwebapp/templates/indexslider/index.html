@@ -1,4 +1,4 @@
-{% extends "kollektionen/base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block title %}
@@ -9,6 +9,12 @@
 
 {% block content %}
 <style>
+  .logo_z{
+    position:absolute;
+    left:55vw;
+    top:50vh;
+    width:27vw;
+  }
   .mySlides.fade {
     width: 100vw;
     height: 100vh;
@@ -34,7 +40,7 @@
   .text {
     color: #f2f2f2;
     font-size: 2em;
-    font-weight:600;
+    font-weight:500;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
@@ -108,9 +114,8 @@
  </div>
     
  {% endfor %}
- <img class="navlogo" src="{% static "img/logo4.svg" %}" alt="firmenlogo schueller-design" />
- <object data="{% static "img/logo4.svg" %}" width="300" height="300"> </object>
- <embed src="{% static "/img/logo4.svg" %}" />
+ <img class="logo_z" src="{% static "img/logo4.svg" %}" alt="firmenlogo schueller-design" />
+ 
   </div>
   <div style="text-align:center">
     {% for c in indexslider %}
