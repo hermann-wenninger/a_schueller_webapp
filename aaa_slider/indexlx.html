@@ -11,8 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="../aaa_slider/assets/css/style.css" />
   <style>
+  
     section.xyz {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -228,18 +229,31 @@
 #hamburg{
   display:none;
 }
+#conta{
+    background-image: url(../aaa_slider/assets/img/trauringe-trace-spuren-aprikotgold.jpg);
+    background-size:cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.overlayx{
+    position: absolute;
+    top: 2em;
+    height:500px;
+    width: 500px;
+    background-color: #ffffff98;
+    position: relative;
+    left:50vw;
+    top:0px;
+
+}
     </style>
   
 </head>
 
 <body>
   <nav id="nav" class="nav">
-
-
     <img class="schueller" src="./assets/img/schueller_logo.png" alt="" />
-    
-
-
     <a class="navlink" href="../card2/card2.html">Kollektions</a>
     <a class="navlink" href="../aktuelles/index.html">Aktuell</a>
     <a class="navlink" href="../kontaktform/kontaktform.html">Kontakt</a>
@@ -267,12 +281,7 @@
       </div>
     </div>
     <div class="row">
-      <a href="javascript:void(0)" class="closebtn" onclick="openNav()"> <input type="checkbox" id="hamburg" />
-      <label for="hamburg" class="hamburg" id="hamburg">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </label></a>
+      
     </div>
     <label class="label">
       <div class="toggle">
@@ -295,199 +304,67 @@
               <div class="slide-image" style="background-image: url(./assets/img/trauringe-zart-brillant-aprikotgold-schueller-design.jpg)"></div>
             </div>
           </div>
-          <div class="slide" data-index="1">
-            <div class="abs-mask">
-              <div class="slide-image" style="background-image: url(./assets/img/trauringe-zart-brillant-aprikotgold-schueller-design.jpg)"></div>
-            </div>
-          </div>
-          <div class="slide" data-index="2">
-            <div class="abs-mask">
-              <div class="slide-image" style="background-image: url(./assets/img/trauringe-zart-brillant-aprikotgold-schueller-design.jpg)"></div>
-            </div>
-          </div>
-          <div class="slide" data-index="3">
-            <div class="abs-mask">
-              <div class="slide-image" style="background-image: url(./assets/img/trauringe-zart-brillant-aprikotgold-schueller-design.jpg)"></div>
-            </div>
-          </div>
+         
         </div>
-        <div id="slides-aux" class="slides mask">
-          <h2 class="slide-title slide" data-index="0">
-            <a href="#">kollektion1</a>
-          </h2>
-          <h2 class="slide-title slide" data-index="1">
-            <a href="#">unendlich</a>
-          </h2>
-          <h2 class="slide-title slide" data-index="2">
-            <a href="#">butterfly</a>
-          </h2>
-          <h2 class="slide-title slide" data-index="3">
-            <a href="#">kolobri</a>
-          </h2>
-        </div>
-      </div>
-      <!-- <div id="info">
-            <div class="slider-title-wrapper">
-                <span class="line"></span>
-                <h5 class="slider-title">
-                    <span>kollektions</span>
-                </h5>
-            </div>
-            <div class="about">
-                <p>
-                    pures gold als zeichen <br/>
-                    für wahre liebe und feundschaft<br/>
-                    by <a href="http://schueller-design.de" target="_blank">claudia schueller</a>,
-                    repo on <a href="https://schueller-design.de" target="_blank">moderne trauringe</a>
-                </p>
-            </div>
-        </div>-->
+    </div>
+        
+    </div>
       <nav id="slider-nav">
         <span class="current">01</span>
         <span class="sep"></span>
         <span class="total">04</span>
       </nav>
     </div>
-    <div id="container" class="container" style="margin-bottom: 2em;">
-      <h1>Nachhaltige Schönheit</h1>
-      Ist Schmuck handgearbeiteten Schmuck von Claudia Schüller der Rahmen für
-      Erreignisse von Dauer und Wert. Recycelte Edelmetalle geschmiedet und
-      kreativ und mit höchster Kunst bearbeitet, besetzt mit ausgesuchten
-      Diamanten aus zertifizierten Quellen, verbindet die preisgekrönte
-      Designerin und Goldschmiedin die Schönheit der Natur und die Schönheit
-      der Diamanten zu einem einzigartigen Design. Poetischer Schmuck, der
-      eine Geschichte erzählt – mit Liebe und Verstand gemacht!
-    </div>
-
-
-
-    <section class="xyz">
-      <figure class="xyz"><img src="../assets/img/deko/gelberle2.jpg" alt="Mountains surrounding a body of water" />
-        <figcaption class="xyz">Aktuelles</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="../assets/img/stock2.jpg"
-          alt="Sun setting over the mountains" />
-        <figcaption class="xyz">Kollektionen</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="https://images.unsplash.com/photo-1430778643786-afad072a0bb1?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=a2f7f06ab7480af81b66d854ec7cfb90"
-          alt="Countryside with tire tracks in grass" />
-        <figcaption class="xyz">New Model</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="../assets/img/marvel/marvel-gold-trauringe-tresor-innenliegendes-band.png"
-          alt="A terrifying close-up of an insect" />
-        <figcaption class="xyz">Kontakt</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="../assets/img/stock3.jpg"
-          alt="Dog looking out car window" />
-        <figcaption class="xyz">Atelier</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=b5d101f72e23afc7e5d667ad09d555ad"
-          alt="Person on mountaintop" />
-        <figcaption class="xyz">Lost in Translation</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="../assets/img/stock4.jpg"
-          alt="Birds eye view of ocean waves" />
-        <figcaption>Händler</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="../assets/img/stock.jpg"
-          alt="A cute golden retriever puppy" />
-        <figcaption class="xyz">Händler Login</figcaption>
-      </figure>
-      <figure class="xyz"><img class="xyz"
-          src="https://images.unsplash.com/photo-1450045439515-ff27c2f2e6b1?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=400&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=97a25f2cb9d2cc37987223a2ca31ad3c"
-          alt="Whale fin emerging from ocean" />
-        <figcaption class="xyz">Wissenswertes</figcaption>
-      </figure>
-    </section>
-    <div id="container" class="container" style="margin-bottom: 2em;">
-      <h1>Nachhaltige Schönheit</h1>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-      kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-      sanctus est Lorem ipsum dolor sit amet.
-    </div>
-    <div class="aktuelles">
-      <section class="articles">
-        <article>
-          <div class="article-wrapper">
-            <figure class="akt">
-              <img src="../assets/img/stock3.jpg" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>messeneuheit </h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
-                bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                weitere infos <span class="sr-only">weitere infos</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-        <article>
-
-          <div class="article-wrapper">
-            <figure class="akt">
-              <img src="../aaa_slider/assets/img/slide-2.jpg" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>neue kollektion</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
-                bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                weiter unter aktuelles <span class="sr-only">weiter unter aktuelles</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-        <article>
-
-          <div class="article-wrapper">
-            <figure class="akt">
-              <img src="../assets/img/marvel/marvel-gold-trauringe-tresor-innenliegendes-band.png" alt="" />
-            </figure>
-            <div class="article-body">
-              <h2>aktuelles messe 2024</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
-                bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                der artikel unter klick <span class="sr-only">der artikel unter klick</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-      </section>
+    <div id="conta" class="container">
+<div class="overlayx">
+    <h1 class="rmv">Ringe die Menschen<br> verbinden</h1>
+    
+   <p class="firststuff"> .....sind mehr als nur Schmuckstücke. Sie
+    sind Symbole für Liebe, Freundschaft, und
+    Treue . Ringe verbinden Menschen die sich
+    nahestehen. Ringe wecken<br> Hoffnung.</p>
+</div>
+ 
     </div>
     <style>
+        .firststuff{
+            
+            font-family: 'Noto Sans', sans-serif;
+            width:80%;
+            font-size: 1.5em;
+            line-height: 2cap;
+            text-align: center
+        }
+       
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+
+        .overlayx{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            font-family: 'Noto Sans', sans-serif;
+            box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+            border-radius: 50%;
+            align-items: center;
+            position: relative;
+            top:20%;
+            scale:0.7;
+            border:2px black;
+            box-shadow: 7px 7px rgba(0, 0, 0, 0.121);
+        }
+        .rmv {
+  position: relative;
+  font-family: monospace;
+  font-size: 2.2em;
+ 
+  color:#181717;
+  font-family: 'Noto Sans', sans-serif;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  
+  
+}
       .aktuelles {
 
         margin-top: 11em;
@@ -629,28 +506,7 @@
         width: 1px;
       }
     </style>
-    <script src="./assets/js/main.js"></script>
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-        document.getElementById("hamburg").style.display = "none";
-        let x = document.getElementsByClassName("line");
-        console.log(x);
-        for (let i = 0; i < x.length; i++) {
-  x[i].style.opacity = '0'
-}
-      }
-      
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-        let x = document.getElementsByClassName("line");
-        console.log(x);
-        for (let i = 0; i < x.length; i++) {
-  x[i].style.opacity = '1'
-}
-      }
-      
-      </script>
+  
 </body>
 
 </html>
