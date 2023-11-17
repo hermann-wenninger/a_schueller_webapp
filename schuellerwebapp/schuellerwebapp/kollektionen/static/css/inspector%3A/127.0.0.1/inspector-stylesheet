@@ -1,0 +1,7 @@
+.row {
+    display: none;
+}
+
+h1 {
+    margin-bottom: 2em;
+}

@@ -1,6 +1,4 @@
-body{
-    background-color: rgb(71, 232, 43);
-}
+
 @font-face{
     font-family: "JustlefthandWeb W03 Regular";
     src: url("a.eot");
@@ -321,3 +319,11 @@ body{
   checkbox:checked .label-text-eng .lang{
     color:green;
   }
+  body{
+    background-color: rgb(71, 232, 43);
+}
+
+
+
+
+

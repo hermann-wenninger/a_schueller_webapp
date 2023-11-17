@@ -19,11 +19,11 @@
         <a class="navlink" href="../card2/card2.html">Kollektionen</a>
         <a class="navlink" href="../aktuelles/index.html">Aktuell</a>
         <a class="navlink" href="../kontaktform/kontaktform.html">Kontakt</a>
-        <a class="navlink" href="../bbb_grid/foliodot.html">Werkstatt</a>
+        <a class="navlink" href="../bbb_grid/foliodot.html">Atelier</a>
         <a class="navlink" href="../aktuelles/index.html">Wissenswertes</a>
         <a class="navlink" href="../adressen/adressen.html">Händler</a>
-        <img class="sozial" src="{% static "img/facebook.png" %}" alt="" />
-        <img class="sozial" src="{% static "img/instagram.png" %}" alt="" />
+        <a class="navlink" href="../adressen/adressen.html">Händlerlogin</a>
+       
         <div id="myNav" class="overlay">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div class="overlay-content">
@@ -69,6 +69,9 @@
     
       {% block content %}
       {% endblock %}
+
+      <img class="sozial" src="{% static "img/facebook.png" %}" alt="" />
+      <img class="sozial" src="{% static "img/instagram.png" %}" alt="" />
     </div>
   </body>
 </html>
