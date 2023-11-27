@@ -15,13 +15,13 @@
 
       
       <img class="navlogo" src="{% static "img/schueller_logo.png" %}" alt="firmenlogo schueller-design" />
-        <a class="navlink" href="../card2/card2.html">Home</a>
-        <a class="navlink" href="../card2/card2.html">Kollektionen</a>
+        <a class="navlink" href="{% url 'indexslider:index' %}">Home</a>
+        <a class="navlink" href="{% url 'kollektionen:ring_list' %}">Kollektionen</a>
         <a class="navlink" href="../aktuelles/index.html">Aktuell</a>
         <a class="navlink" href="../kontaktform/kontaktform.html">Kontakt</a>
-        <a class="navlink" href="../bbb_grid/foliodot.html">Atelier</a>
+        <a class="navlink" href="{% url 'atelier:atelier' %}">Atelier</a>
         <a class="navlink" href="../aktuelles/index.html">Wissenswertes</a>
-        <a class="navlink" href="../adressen/adressen.html">Händler</a>
+        <a class="navlink" href="{% url 'adresses:adresses' %}">Händler</a>
         <a class="navlink" href="../adressen/adressen.html">Händlerlogin</a>
        
         <div id="myNav" class="overlay">
@@ -70,8 +70,8 @@
       {% block content %}
       {% endblock %}
 
-      <img class="sozial" src="{% static "img/facebook.png" %}" alt="" />
-      <img class="sozial" src="{% static "img/instagram.png" %}" alt="" />
+      <img class="sozial" src="{% static "img/facebook.png" %}" alt="Zugang zur Facebookseite der Firma Schüller-Design" />
+      <img class="sozial" src="{% static "img/instagram.png" %}" alt="Link zur Instagramseite der Firma Schüller-Design" />
     </div>
   </body>
 </html>
