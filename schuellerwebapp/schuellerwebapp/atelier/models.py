@@ -11,3 +11,6 @@ class BilderAtelier(models.Model):
 class EinleitungAtelier(models.Model):
     ueberschrift = models.CharField(max_length=255, blank=True)
     text = models.TextField(blank = True)
+     
+    def __str__(self):
+        return self.ueberschrift

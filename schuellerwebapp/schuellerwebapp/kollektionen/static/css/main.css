@@ -1,4 +1,6 @@
-
+body{
+  background-color: #ffffff;
+}
 @font-face{
     font-family: "JustlefthandWeb W03 Regular";;
     src: url("a.eot");

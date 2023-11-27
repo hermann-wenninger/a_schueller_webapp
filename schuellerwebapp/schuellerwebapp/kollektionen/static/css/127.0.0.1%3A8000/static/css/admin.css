@@ -1,0 +1,32 @@
+div#header {
+    background-color: #fbfaf9;
+}
+img.brand_img {
+    width: 333px;
+    height: auto;
+}
+div#user-tools {
+    color: black;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+h1#head {
+    color: black;
+}
+.module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    text-align: left;
+    background: #d9001a;
+    color: var(--header-link-color);
+}
+a:link, a:visited {
+    color: #0c0c0c;
+    text-decoration: none;
+    transition: color 0.15s, background 0.15s;
+}
+.breadcrumbs {
+    background-color: #d9001a !important;
+}
