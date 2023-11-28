@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "indexslider",
     "adresses",
     "atelier",
+    "sendemail",
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR /'media'
+
+
+DEFAULT_FROM_EMAIL  = "info@wennhmann.de" 
+EMAIL_BACKEND  = "django.core.mail.backends.console.EmailBackend"
