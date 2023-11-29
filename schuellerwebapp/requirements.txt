@@ -25,9 +25,9 @@ click @ file:///C:/b/abs_f9ihnt72pu/croot/click_1698129847492/work
 click-didyoumean==0.3.0
 click-plugins==1.1.1
 click-repl==0.3.0
-cloudpickle @ file:///C:/b/abs_3796yxesic/croot/cloudpickle_1683040098851/work
-colorama @ file:///C:/ci_311/colorama_1676422310965/work
-comm @ file:///C:/ci_311/comm_1678376562840/work
+cloudpickle 
+colorama
+comm
 cookiecutter @ file:///C:/b/abs_3d1730toam/croot/cookiecutter_1700677089156/work
 cryptography @ file:///C:/b/abs_f4do8t8jfs/croot/cryptography_1694444424531/work
 debugpy @ file:///C:/b/abs_c0y1fjipt2/croot/debugpy_1690906864587/work
