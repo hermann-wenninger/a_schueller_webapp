@@ -18,11 +18,11 @@
         <a class="navlink" href="{% url 'indexslider:index' %}">Home</a>
         <a class="navlink" href="{% url 'kollektionen:ring_list' %}">Kollektionen</a>
         <a class="navlink" href="../aktuelles/index.html">Aktuell</a>
-        <a class="navlink" href="../kontaktform/kontaktform.html">Kontakt</a>
+        <a class="navlink" href="{% url 'sendemail:contact' %}">Kontakt</a>
         <a class="navlink" href="{% url 'atelier:atelier' %}">Atelier</a>
         <a class="navlink" href="../aktuelles/index.html">Wissenswertes</a>
         <a class="navlink" href="{% url 'adresses:adresses' %}">Händler</a>
-        <a class="navlink" href="../adressen/adressen.html">Händlerlogin</a>
+        <a class="navlink" href="{% url 'haendlerlogin:login' %}">Händlerlogin</a>
        
         <div id="myNav" class="overlay">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

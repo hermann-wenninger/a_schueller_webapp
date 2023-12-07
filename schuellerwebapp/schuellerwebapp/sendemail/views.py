@@ -18,7 +18,7 @@ def contactView(request):
                 return HttpResponse("Invalid header found.")
             return redirect('sendemail:success')
             #return redirect("success")
-    return render(request, "email.html", {"form": form})
+    return render(request, "sendemail/email.html", {"form": form})
 
 def success(request):
     return HttpResponse("Danke für Ihre Nachricht, Sie bekommen baldmöglichst eine Antwort")

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "adresses",
     "atelier",
     "sendemail",
+    "haendlerlogin",
 ]
 
 MIDDLEWARE = [

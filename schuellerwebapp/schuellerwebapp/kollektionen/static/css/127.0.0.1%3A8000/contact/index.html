@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+  Händlerlogin
+</title>
+    <link href="/static/css/main.css" rel="stylesheet">
+    
+
+   
+  </head>
+  <body>
+    <nav id="nav" class="nav">
+
+
+      
+      <img class="navlogo" src="/static/img/schueller_logo.png" alt="firmenlogo schueller-design" />
+        <a class="navlink" href="/">Home</a>
+        <a class="navlink" href="/kollektionen">Kollektionen</a>
+        <a class="navlink" href="../aktuelles/index.html">Aktuell</a>
+        <a class="navlink" href="/contact/">Kontakt</a>
+        <a class="navlink" href="/atelier">Atelier</a>
+        <a class="navlink" href="../aktuelles/index.html">Wissenswertes</a>
+        <a class="navlink" href="/adressen">Händler</a>
+        <a class="navlink" href="/haendlerlogin/">Händlerlogin</a>
+       
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">kollektion</a>
+            <hr class="hr">
+            <a href="#">aktuelles</a>
+            <hr class="hr">
+            <a href="#">kontakt</a>
+            <hr class="hr">
+            <a href="#">atelier</a>
+            <hr class="hr">
+            <a href="#">wissenswertes</a>
+            <hr class="hr">
+            <a href="#">händler</a>
+            <div class="undernav">
+              <div class="left">impressum</div>
+              <div class="right">agb's</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="javascript:void(0)" class="closebtn" onclick="openNav()"> <input type="checkbox" id="hamburg" />
+          <label for="hamburg" class="hamburg" id="hamburg">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label></a>
+        </div>
+        
+      <div class="language">
+        <div class="label-text-de lang">de</div>
+        <label class="label">
+         
+          <div class="toggle">
+            <input class="toggle-state" type="checkbox" name="check" value="check" />
+            <div class="indicator"></div>
+          </div>
+          
+        </label>
+        <div class="label-text-eng lang">eng</div>
+      </div>
+      </nav>
+    
+      
+<style>
+    .outermail {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input#id_from_email {
+        padding: 6px;
+   
+        padding: 6px;
+        font-size: 16px;
+        border-width: 2px;
+        border-color: #da2727;
+        background-color: #FFFFFF;
+        color: #000000;
+        border-style: solid;
+        border-radius: 8px;
+        box-shadow: 0px 0px 12px rgba(66,66,66,.79);
+        text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+        width:35vw;
+        margin:0.3em;
+        margin:0.3em;
+        margin:0.3em;
+        margin:0.3em;
+        padding: 6px;
+        font-size: 16px;
+        border-width: 3px;
+        border-color: #da2727;
+        background-color: #FFFFFF;
+        color: #000000;
+        border-style: solid;
+        border-radius: 8px;
+        box-shadow: 0px 0px 12px rgba(66,66,66,.79);
+        text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    }
+    input#id_subject{
+        padding: 6px;
+        font-size: 16px;
+        border-width: 3px;
+        border-color: #da2727;
+        background-color: #FFFFFF;
+        color: #000000;
+        border-style: solid;
+        border-radius: 8px;
+        box-shadow: 0px 0px 12px rgba(66,66,66,.79);
+        text-shadow: 0px 0px 5px rgba(66,66,66,.75); 
+    }
+    textarea#id_message{
+        padding: 6px;
+        font-size: 16px;
+        padding: 6px;
+        font-size: 16px;
+        border-width: 3px;
+        border-color: #da2727;
+        background-color: #FFFFFF;
+        color: #000000;
+        border-style: solid;
+        border-radius: 8px;
+        box-shadow: 0px 0px 12px rgba(66,66,66,.79);
+        text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+        width:35vw;
+        margin: 1em;
+     class="outermail">
+<form method="post">
+    <input type="hidden" name="csrfmiddlewaretoken" value="rVyZEzTXqbc79lRlzd9MhUwoCXH72mZDOM85YyhRFCNPpy4RmlWKFKaEofcx4Py4">
+    <p>
+    <label for="id_from_email">From email:</label>
+    <input type="email" name="from_email" required id="id_from_email">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_name">Name:</label>
+    <input type="text" name="name" required id="id_name">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_subject">Subject:</label>
+    <input type="text" name="subject" required id="id_subject">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_message">Message:</label>
+    <textarea name="message" cols="40" rows="10" required id="id_message">
+</textarea>
+    
+    
+      
+    
+  </p>
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+
+
+      <img class="sozial" src="/static/img/facebook.png" alt="Zugang zur Facebookseite der Firma Schüller-Design" />
+      <img class="sozial" src="/static/img/instagram.png" alt="Link zur Instagramseite der Firma Schüller-Design" />
+    </div>
+  </body>
+</html>

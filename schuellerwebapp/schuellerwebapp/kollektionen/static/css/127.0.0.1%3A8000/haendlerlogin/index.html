@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+  Händlerlogin
+</title>
+    <link href="/static/css/main.css" rel="stylesheet">
+    
+
+   
+  </head>
+  <body>
+    <nav id="nav" class="nav">
+
+
+      
+      <img class="navlogo" src="/static/img/schueller_logo.png" alt="firmenlogo schueller-design" />
+        <a class="navlink" href="/">Home</a>
+        <a class="navlink" href="/kollektionen">Kollektionen</a>
+        <a class="navlink" href="../aktuelles/index.html">Aktuell</a>
+        <a class="navlink" href="../kontaktform/kontaktform.html">Kontakt</a>
+        <a class="navlink" href="/atelier">Atelier</a>
+        <a class="navlink" href="../aktuelles/index.html">Wissenswertes</a>
+        <a class="navlink" href="/adressen">Händler</a>
+        <a class="navlink" href="../adressen/adressen.html">Händlerlogin</a>
+       
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">kollektion</a>
+            <hr class="hr">
+            <a href="#">aktuelles</a>
+            <hr class="hr">
+            <a href="#">kontakt</a>
+            <hr class="hr">
+            <a href="#">atelier</a>
+            <hr class="hr">
+            <a href="#">wissenswertes</a>
+            <hr class="hr">
+            <a href="#">händler</a>
+            <div class="undernav">
+              <div class="left">impressum</div>
+              <div class="right">agb's</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="javascript:void(0)" class="closebtn" onclick="openNav()"> <input type="checkbox" id="hamburg" />
+          <label for="hamburg" class="hamburg" id="hamburg">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label></a>
+        </div>
+        
+      <div class="language">
+        <div class="label-text-de lang">de</div>
+        <label class="label">
+         
+          <div class="toggle">
+            <input class="toggle-state" type="checkbox" name="check" value="check" />
+            <div class="indicator"></div>
+          </div>
+          
+        </label>
+        <div class="label-text-eng lang">eng</div>
+      </div>
+      </nav>
+    
+      
+<style>
+    .outofform {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        text-decoration: none;
+        color: #9b9b9b;
+        font-size: 18px;
+        border-radius: 50px;
+        width: 100px;
+        height: 100px;
+        font
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 100vh;
+      }
+      
+      .button:hover {
+        transform: translateY(2px);
+        box-shadow: 0 0 rgba(0, 0, 0, 0);
+      }
+      li {
+        display: none;
+    }
+</style>
+<div class="outofform">
+<form method="post">
+    <input type="hidden" name="csrfmiddlewaretoken" value="hqaijByCXe3FnDxdfhF5FPJmepJOOMyOEhKoDAWwcFEnDQKJ2ps33FnC0HeeQf7f">
+    <ul class="errorlist"><li>This field is required.</li></ul>
+  <p>
+    <label for="id_password">Password:</label>
+    <input type="password" name="password" maxlength="32" required id="id_password">
+    
+    
+      
+    
+  </p>
+    <div class="form-actions">
+      <button class="button" type="submit">Login</button>
+    </div>
+</form>
+</div>
+
+
+      <img class="sozial" src="/static/img/facebook.png" alt="Zugang zur Facebookseite der Firma Schüller-Design" />
+      <img class="sozial" src="/static/img/instagram.png" alt="Link zur Instagramseite der Firma Schüller-Design" />
+    </div>
+  </body>
+</html>

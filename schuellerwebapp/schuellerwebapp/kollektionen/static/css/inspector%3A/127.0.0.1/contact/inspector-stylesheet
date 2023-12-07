@@ -1,0 +1,47 @@
+label {
+    font-family: monospace;
+    margin-top: 1em;
+}p {
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}.innermail {
+    align-self: self-end;
+}.innermail {
+    display: grid;
+    align-content: stretch;
+    align-content: start;
+}textarea#id_message {}input#id_subject {}input#id_from_email {
+    padding: 6px;
+    font-size: 14px;
+    border-width: 2px;
+    border-color: #da2727;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px rgba(66,66,66,.79);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}.outermail {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input#id_name {
+    padding: 6px;
+    font-size: 14px;
+    border-width: 2px;
+    border-color: #da2727;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px rgba(66,66,66,.79);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+button {align-content: flex-end;}
