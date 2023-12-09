@@ -189,7 +189,7 @@
     font-family: monospace;
   }
   
-  input#hamburg {
+  #hamburg {
     display: none;
   }
   
@@ -323,7 +323,9 @@
     background-color: rgb(71, 232, 43);
 }
 
-
+#hamburg {
+  display: none;
+}
 
 
 

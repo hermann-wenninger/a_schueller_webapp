@@ -191,11 +191,7 @@ body{
     font-family: monospace;
   }
   
-  input#hamburg {
-    display: none;
-  }
-  
-  label.hamburg {
+label.hamburg {
     display: block;
     background: #ffffff00;
     width: 75px;
@@ -320,4 +316,8 @@ body{
   
   checkbox:checked .label-text-eng .lang{
     color:green;
+  }
+
+  #hamburg {
+    display: none;
   }
