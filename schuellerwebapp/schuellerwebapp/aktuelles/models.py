@@ -12,5 +12,8 @@ class Aktuelles(models.Model):
     in_stadt = models.CharField(max_length=200)
     plz = models.CharField(max_length=10)
     strasse_hnr = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.ueberschrift
     
     
