@@ -66,13 +66,13 @@
    
 </style>
 <div class="fenster">
-{% for c in aktuelles_list %}
+{% for c in wissenswert_list %}
 <div class="aktuelles">
-    <div class='left'><img class="aktuellesimg" src="{{c.image.url}}" alt="Bild zu{{c.ueberschrift}}"></div>
+    <div class='left'><img class="aktuellesimg" src="{{c.image_1.url}}" alt="Bild zu{{c.ueberschrift}}"></div>
     <div class='right'>
-        <h1>{{c.ueberschrift}}</h1><br>
-      <div class="fltext">  {{c.beschreibung}}</div>
-    <a href="{% url 'aktuelles:aktuelles-detail' c.id %}">more</a>
+        <h1>{{c.ueberschrift_1}}</h1><br>
+      <div class="fltext">  {{c.text_1 |truncatewords:60}}</div>
+    <a href="{% url 'wissenswert:wissenswert-detail' c.id %}">more</a>
     </div>
 
 

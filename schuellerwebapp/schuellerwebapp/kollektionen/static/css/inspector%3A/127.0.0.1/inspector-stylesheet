@@ -1,1 +1,5 @@
-p {}
+.outerrim {
+    padding: 1em;
+}.outerrim {
+    background-color: aqua;
+}p {}

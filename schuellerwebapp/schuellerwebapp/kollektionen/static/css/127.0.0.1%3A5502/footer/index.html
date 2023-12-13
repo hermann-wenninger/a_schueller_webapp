@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+.wrapper {
+ 
+}
+.outerrim{
+  display:flex;
+  justify-content: center;
+  font-family:monospace;
+  font-size: 0.7em;
+  flex-direction: column;
+  align-items: center;
+}
+.horline{
+  background-color:black;
+  height: 150px;
+  width: 2px;
+
+}
+.line{
+  border-right:1px solid gray;
+  height:20px;
+}
+.flex {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: row; */
+    align-items: flex-end;
+    text-align: start;
+    /* width: 100vw; */
+}
+.footerlogo{
+  height: 100px;
+}
+.logo{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+ul li{
+  text-decoration: none;
+  list-style: none;
+}
+.sozialbutt{
+  width: 19px;
+  margin-left: 1em;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+.goleft{
+  margin-left:-3em;
+}
+   </style>
+</head>
+<body>
+  <div class="outerrim">
+
+    <div class="flex logo">
+     <img class="footerlogo" src="Logox.jpg" alt="Logo der Firma Schueller-design">
+
+    </div>
+    
+    <div class="flex goleft">
+      <ul>
+        <li>Kontakt</li>
+        <li>Impressum</li>
+        
+        
+      </ul>
+    </div>
+   
+    <div class="flex">
+      <ul>
+        <li>DSGVO</li>
+        <li>AGB</li>
+      </ul>
+    </div>
+    
+    <div class="flex">
+      <img class="sozialbutt" src="instagram.png" alt="">
+      <img class="sozialbutt" src="facebook.png" alt="">
+    </div>
+    
+    <div class="flex">
+     <ul>
+      <li>Kollektionen</li>
+      <li>Händlerligin</li>
+      <li>Händler Location's</li>
+      <li>Aktuelles</li>
+      <li>30 Jahre Schueller-Design Atelier</li>
+      <li>Wissenswertes</li>
+     </ul>
+    </div>
+ 
+</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

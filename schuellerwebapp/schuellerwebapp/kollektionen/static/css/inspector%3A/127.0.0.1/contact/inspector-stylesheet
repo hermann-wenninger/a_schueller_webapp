@@ -1,4 +1,6 @@
-label {
+.outerrim {
+    background-color: gainsboro;
+}label {
     font-family: monospace;
     margin-top: 1em;
 }p {

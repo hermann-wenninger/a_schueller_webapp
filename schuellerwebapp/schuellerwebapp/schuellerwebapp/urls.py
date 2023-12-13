@@ -27,6 +27,7 @@ urlpatterns = [
     path('', include('sendemail.urls', namespace='sendemail')),
     path('', include('haendlerlogin.urls', namespace='haendlerlogin')),
     path('', include('aktuelles.urls', namespace='aktuelles')),
+    path('', include('wissenswert.urls', namespace='wissenswert')),
     ] 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

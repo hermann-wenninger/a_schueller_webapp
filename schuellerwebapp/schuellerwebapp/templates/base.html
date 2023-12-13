@@ -20,7 +20,7 @@
         <a class="navlink" href="{% url 'aktuelles:aktuell' %}">Aktuell</a>
         <a class="navlink" href="{% url 'sendemail:contact' %}">Kontakt</a>
         <a class="navlink" href="{% url 'atelier:atelier' %}">Atelier</a>
-        <a class="navlink" href="{% url 'wissenswertes:wissenswertes' %">Wissenswertes</a>
+        <a class="navlink" href="{% url 'wissenswert:wissenswert' %}">Wissenswertes</a>
         <a class="navlink" href="{% url 'adresses:adresses' %}">Händler</a>
         <a class="navlink" href="{% url 'haendlerlogin:login' %}">Händlerlogin</a>
        
@@ -70,8 +70,38 @@
       {% block content %}
       {% endblock %}
 
-      <img class="sozial" src="{% static "img/facebook.png" %}" alt="Zugang zur Facebookseite der Firma Schüller-Design" />
-      <img class="sozial" src="{% static "img/instagram.png" %}" alt="Link zur Instagramseite der Firma Schüller-Design" />
+     
     </div>
+    <div class="outerrim">
+
+      <div class="flex logo">
+
+       <img class="footerlogo" src="{% static "img/Logox.jpg" %}" alt="Logo der Firma Schüller-Design" />
+      </div>
+      
+      <div class="flex goleft">
+        <ul>
+          <li>Kontakt</li>
+          <li>Impressum</li>
+          
+          
+        </ul>
+      </div>
+     
+      <div class="flex">
+        <ul>
+          <li>DSGVO</li>
+          <li>AGB</li>
+        </ul>
+      </div>
+      
+      <div class="flex">
+        <img class="sozial" src="{% static "img/facebook.png" %}" alt="Zugang zur Facebookseite der Firma Schüller-Design" />
+        <img class="sozial" src="{% static "img/instagram.png" %}" alt="Link zur Instagramseite der Firma Schüller-Design" />
+      </div>
+      
+      
+   
+  </div>
   </body>
 </html>
