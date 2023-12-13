@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Aktuelles(models.Model):
     ueberschrift = models.CharField(max_length=200)
@@ -15,5 +16,8 @@ class Aktuelles(models.Model):
 
     def __str__(self):
         return self.ueberschrift
+    
+    def get_absolute_url(self):
+        return reverse("aktuelles-detail", kwargs={"pk": self.pk})
     
     

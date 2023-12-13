@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "sendemail",
     "haendlerlogin",
     "aktuelles",
+    "wissenswert",
 ]
 
 MIDDLEWARE = [

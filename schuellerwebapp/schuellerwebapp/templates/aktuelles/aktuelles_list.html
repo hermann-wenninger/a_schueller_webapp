@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static "css/aktuelles.css" %}" rel="stylesheet">
+
+
+{% block title %}
+  Aktuelles
+{% endblock %}
+{% block content %}
+<style>
+    .fenster {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 120px;
+        font-family: monospace;
+        height:auto;
+    }
+    .aktuelles{
+        background-color: #f6f7f8;
+        border-radius:7px;
+        width:90vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom:2em;
+    }
+    .right {
+        margin-left: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: center;
+        justify-content: flex-start;
+    }
+    img.aktuellesimg{
+        height: 350px;
+        border-radius: 7px;
+        max-width:350px;
+    }
+    h1{
+        margin-top:1em;
+        font-size:2.9em;
+        align-self: baseline;
+    }
+    .fltext{
+    font-size: .9em;
+    font-family: Helvetica;
+    font-palette: light;
+    font-optical-sizing: inherit;
+    font-feature-settings: normal;
+    font-kerning: normal;
+    font-stretch: condensed;
+    font-synthesis-style: inherit;
+    font-variant: petite-caps;
+    font-variant-numeric: lining-nums;
+    font-stretch: expanded;
+    line-height: 1.5;
+    width:95%;
+    align-self: baseline;
+    font-weight:100;
+    }
+   
+</style>
+<div class="fenster">
+{% for c in aktuelles_list %}
+<div class="aktuelles">
+    <div class='left'><img class="aktuellesimg" src="{{c.image.url}}" alt="Bild zu{{c.ueberschrift}}"></div>
+    <div class='right'>
+        <h1>{{c.ueberschrift}}</h1><br>
+      <div class="fltext">  {{c.beschreibung}}</div>
+    <a href="{% url 'aktuelles:aktuelles-detail' c.id %}">more</a>
+    </div>
+
+
+</div>
+{% endfor %}
+</div>
+{% endblock %}
