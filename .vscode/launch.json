@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/a_work/a_schueller_webapp/OnlineWebFonts_COM_0e515c4af68b48e1facd2d386d27636d",
-      "program": "d:/a_work/a_schueller_webapp/OnlineWebFonts_COM_0e515c4af68b48e1facd2d386d27636d/build/Debug/outDebug",
+      "cwd": "d:/a_work/a_schueller_webapp/schuellerwebapp/schuellerwebapp/kollektionen/static",
+      "program": "d:/a_work/a_schueller_webapp/schuellerwebapp/schuellerwebapp/kollektionen/static/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

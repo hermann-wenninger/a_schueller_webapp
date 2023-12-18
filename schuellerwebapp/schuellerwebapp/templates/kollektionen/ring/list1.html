@@ -177,6 +177,33 @@ height: 100px;
   font-size:2em;
   color:black;
 }
+.infotext {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top:2em;
+}
+.centertext {
+  width: 65vw;
+}
+h1.itext_ue {
+  font-family: monospace;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+p.itext {
+  font-family: monospace;
+  margin: 1em;
+  font-size: .95em;
+  font-weight: 600;
+  color: #546E7A;
+}
+.product_image{
+  height:350px;
+}
 </style>
  
     <h1 class="kollekt">Kollektion:{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
@@ -185,14 +212,12 @@ height: 100px;
     <div class="mySlides fade">
       <div class="numbertext img-magnifier-container">1 / 3</div>
         <a href="{{ product.get_absolute_url }}">
-          <img src="{{ product.image.url }}">
+          <img class="product_image" src="{{ product.image.url }}">
         </a>
        <div class="pname">{{ product.name }}</div>
      
     </div>
-       
-     
-    {% endfor %}
+       {% endfor %}
     <a class="prev xc xy" onclick="plusSlides(-1)">❮</a>
     <a class="next xc xy" onclick="plusSlides(1)">❯</a>
   </div>
@@ -205,7 +230,18 @@ height: 100px;
     <span class="dot" onclick="currentSlide(2)"></span> 
     <span class="dot" onclick="currentSlide(3)"></span> -->
   </div>
-  
+  <div class="infotext">
+    <div class="centertext">
+   <h1 class="itext_ue">{{category.ueberschrift_1}}</h1>
+   <p class="itext">{{category.text_1}}</p>
+   <h1 class="itext_ue">{{category.ueberschrift_2}}</h1>
+   <p class="itext">{{category.text_2}}</p>
+   <h1 class="itext_ue">{{category.ueberschrift_3}}</h1>
+   <p class="itext">{{category.text_3}}</p>
+   <h1 class="itext_ue">{{category.ueberschrift_4}}</h1>
+   <p class="itext">{{category.text_4}}</p>
+    </div>
+  </div>
   <script>
   let slideIndex = 1;
   showSlides(slideIndex);

@@ -5,6 +5,20 @@ class Kollektion(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200,unique=True)
     image = models.ImageField(upload_to='kollektionen/%Y/%m/%d',blank=True)
+    ueberschrift_1 = models.CharField(max_length=200,default="")
+    text_1 = models.TextField(blank=True,default="")
+    ueberschrift_2 = models.CharField(max_length=200,default="")
+    text_2 = models.TextField(blank=True,default="")
+    ueberschrift_3 = models.CharField(max_length=200,default="")
+    text_3 = models.TextField(blank=True,default="")
+    ueberschrift_4 = models.CharField(max_length=200,default="")
+    text_4 = models.TextField(blank=True,default="")
+
+
+
+
+
+
     class Meta:
         ordering = ['name']
         indexes = [
