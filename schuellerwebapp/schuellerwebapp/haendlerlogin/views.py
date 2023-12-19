@@ -20,3 +20,15 @@ def login(request):
             #return HttpResponseRedirect("haendlerlogin:login")
             return render(request, "haendlerlogin/login/index.html")
     return render(request, "haendlerlogin/login.html", {"form": form})
+
+def download_broschuere(request):
+    pdf = PDF.objects.all().first()
+    return render(request,'haendlerlogin/download_broschuere.html',{'pdf':pdf})
+
+def download_ekvk(request):
+    pdf = PDF.objects.all().first()
+    return render(request,'haendlerlogin/download_ekvk.html',{'pdf':pdf})
+
+def download_vk(request):
+    pdf = PDF.objects.all().first()
+    return render(request,'haendlerlogin/download_vk.html',{'pdf':pdf})

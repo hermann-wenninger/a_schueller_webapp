@@ -153,32 +153,7 @@ body{
   
   /******hamburger*******/
   
-  
-  #hamburg {
-      scale: 0.4;
-      position: relative;
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-  }
-  #hamburg:checked + .hamburg .line:nth-child(3) {
-    transform: translateY(-12px) rotate(45deg);
-  }
-  .line:nth-child(1) {
-    top: 12px;
-  }
-  .line:nth-child(2) {
-    top: 24px;
-  }
-  .line:nth-child(3) {
-    top: 36px;
-  }
-  
-  
-  
-  .sozial {
+    .sozial {
     width: 1.4em;
     margin: 0.5em;
   }
@@ -189,35 +164,6 @@ body{
     font-family: monospace;
   }
   
-label.hamburg {
-    display: block;
-    background: #ffffff00;
-    width: 75px;
-    height: 50px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
-    scale: 0.6;
-  }
-  
-  .line {
-    position: absolute;
-    left: 10px;
-    height: 4px;
-    width: 55px;
-    background: #2f2e2e;
-    border-radius: 2px;
-    display: block;
-    transition: 0.5s;
-    transform-origin: center;
-  }
-  .line:nth-child(2) {
-    top: 24px;
-  }
-  .line:nth-child(3) {
-    top: 36px;
-  }
   .label {
     scale: .9;
     display: inline-flex;
@@ -258,18 +204,7 @@ label.hamburg {
     max-width: 100%;
     height: auto;
   }
-  #hamburg:checked + .hamburg .line:nth-child(1){
-  transform: translateY(12px) rotate(-45deg);
-  }
-  
-  #hamburg:checked + .hamburg .line:nth-child(2){
-  opacity:0;
-  }
-  
-  #hamburg:checked + .hamburg .line:nth-child(3){
-  transform: translateY(-12px) rotate(45deg);
-  }
-  .navlog{
+ .navlog{
     width: 250px;
   }
   a.navlink:hover {
@@ -336,10 +271,7 @@ label.hamburg {
     width: 2px;
   
   }
-  .line{
-    border-right:1px solid gray;
-    height:20px;
-  }
+  
   .flex {
       display: flex;
       justify-content: flex-start;
@@ -379,6 +311,40 @@ label.hamburg {
   .goleft{
     margin-left:.5em;
   }
-  #hamburg {
-    /*display: none;*/
-  }
+  .line { 
+    position: absolute; 
+    left:10px;
+    height: 4px; width: 55px; 
+    background: #171616; border-radius: 2px;
+    display: block; 
+    transition: 0.5s; 
+    transform-origin: center; 
+ }
+ 
+ .line:nth-child(1) { top: 12px; }
+ .line:nth-child(2) { top: 24px; }
+ .line:nth-child(3) { top: 36px; }
+ 
+ #hamburg:checked + .hamburg .line:nth-child(1){
+    transform: translateY(12px) rotate(-45deg);
+ }
+ 
+ #hamburg:checked + .hamburg .line:nth-child(2){
+    opacity:0;
+ }
+ 
+ #hamburg:checked + .hamburg .line:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+ }
+ label.hamburg { 
+  display: block;
+  position: relative; 
+  margin-left: auto; margin-right: auto;
+  border-radius: 4px; 
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  scale:0.6;
+}
+
+input#hamburg {display:none}

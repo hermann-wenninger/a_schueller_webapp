@@ -7,11 +7,7 @@
     <link href="{% static "css/main.css" %}" rel="stylesheet">
     
 
-   <style>
-    .active{
-      display:block;
-    }
-   </style>
+   
   </head>
   <body>
     <nav id="nav" class="nav">
@@ -30,44 +26,40 @@
        
         <div id="myNav" class="overlay">
           <div class="overlay-content">
-            <a href="#">kollektion</a>
+            <a href="{% url 'indexslider:index' %}">Home</a>
             <hr class="hr">
-            <a href="#">aktuelles</a>
+            <a href="{% url 'kollektionen:ring_list' %}">Kollektion</a>
             <hr class="hr">
-            <a href="#">kontakt</a>
+            <a href="{% url 'aktuelles:aktuell' %}">Aktuelles</a>
             <hr class="hr">
-            <a href="#">atelier</a>
+            <a href="{% url 'sendemail:contact' %}">Kontakt</a>
             <hr class="hr">
-            <a href="#">wissenswertes</a>
+            <a href="{% url 'atelier:atelier' %}">Atelier</a>
             <hr class="hr">
-            <a href="#">händler</a>
+            <a href="{% url 'wissenswert:wissenswert' %}">Wissenswertes</a>
+            <hr class="hr">
+            <a href="{% url 'adresses:adresses' %}">Händler</a>
+            <hr class="hr">
+            <a href="{% url 'haendlerlogin:login' %}">Händlerlogin</a>
             <div class="undernav">
-              <div class="left">impressum</div>
-              <div class="right">agb's</div>
+            <div>  <div class="left">Impressum</div>
+              <div class="right">AGB</div></div>
+             <div> <div class="left">Impressum</div>
+              <div class="right">AGB</div></div>
             </div>
+            <img class="navlogo" src="{% static "img/schueller_logo.png" %}" alt="firmenlogo schueller-design" />
           </div>
         </div>
         <div class="row">
-          <a href="javascript:void(0)" class="closebtn" onclick="openNav()"> <input type="checkbox" id="hamburg" />
-          <label for="hamburg" class="hamburg" id="hamburg">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </label></a>
-        </div>
-        
-      <div class="language">
-        <div class="label-text-de lang">de</div>
-        <label class="label">
-         
-          <div class="toggle">
-            <input class="toggle-state" type="checkbox" name="check" value="check" />
-            <div class="indicator"></div>
-          </div>
-          
-        </label>
-        <div class="label-text-eng lang">eng</div>
+          <input type="checkbox" id="hamburg">
+          <label for="hamburg" class="hamburg">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+          </label>
       </div>
+        
+      
       </nav>
     
       {% block content %}
@@ -107,10 +99,47 @@
    
   </div>
   <script>
-    document.getElementById('hamburg').onclick = function() {
-      document.getElementById('myNav').classList.toggle('active')
-  }
+   
+   let x =  document.getElementById('hamburg')
+   x.onclick = function() {
+      console.log('hamburg click for');
+      document.getElementById('myNav').classList.toggle('active');}
+      
+  
+  
   </script>
-
+  <style>
+    .overlay{
+      display:none;
+    }
+    .active {
+      display:block;
+    }
+    .overlay-content {
+      width: 100vw;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      background-color: #f0f8fff2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .undernav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    font-size: 1em;
+    font-family: monospace;
+    background-color: gray;
+    margin: 1em;
+    padding: 0.61em;
+    color: white;
+}
+   </style>
   </body>
 </html>

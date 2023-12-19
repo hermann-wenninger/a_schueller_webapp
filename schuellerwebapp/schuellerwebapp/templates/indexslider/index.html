@@ -29,8 +29,6 @@
   /* Slideshow container */
   .slideshow-container {
     width: 100vw;
-    position: absolute;
-    top:0;
     left:0;
     margin: 0;
     overflow:hidden;
@@ -101,6 +99,18 @@
     .mySlides.fade {
      transform:rotate(360deg);
    }
+   .dotliner {
+    display: flex;
+}
+.arounddotliner {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-top:2em;
+}
   </style>
   <div class="slideshow-container">
 
@@ -117,11 +127,12 @@
  <img class="logo_z" src="{% static "img/logo4.svg" %}" alt="firmenlogo schueller-design" />
  
   </div>
-  <div style="text-align:center">
+  <div class="arounddotliner">
+  <div class="dotliner" style="text-align:center">
     {% for c in indexslider %}
     <span class="dot"></span> 
     {% endfor %}
-   
+  </div>
   </div>
   <script>
     let slideIndex = 0;
