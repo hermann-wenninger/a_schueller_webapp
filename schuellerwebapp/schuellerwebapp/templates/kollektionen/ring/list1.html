@@ -204,6 +204,23 @@ p.itext {
 .product_image{
   height:350px;
 }
+.dotliner {
+  display: flex;
+}
+.arounddotliner {
+display: flex;
+width: 100vw;
+justify-content: center;
+align-items: center;
+align-content: center;
+flex-direction: column;
+margin-top:2em;
+}
+.man {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 </style>
  
     <h1 class="kollekt">Kollektion:{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
@@ -222,10 +239,14 @@ p.itext {
     <a class="next xc xy" onclick="plusSlides(1)">❯</a>
   </div>
   <br>
-  <div style="text-align:center">
+  <div class="arounddotliner">
+    <div class="dotliner" style="text-align:center">
+  <div class="man" style="text-align:center">
     {% for x in count %}
     <span class="dot" onclick="currentSlide({{ x }})"></span> 
     {% endfor %}
+  </div>
+</div>
    <!-- <span class="dot" onclick="currentSlide(1)"></span> 
     <span class="dot" onclick="currentSlide(2)"></span> 
     <span class="dot" onclick="currentSlide(3)"></span> -->

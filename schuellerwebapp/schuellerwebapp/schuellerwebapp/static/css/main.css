@@ -227,8 +227,10 @@ body{
   font-size: .8em;
   }
   .navlogo{
-    width: 200px;
+    width: 230px;
     margin-right: 1em;
+    position: absolute;
+    left: 52px;
   }
   .lang{
     font-family: monospace;
@@ -350,3 +352,13 @@ body{
 }
 
 input#hamburg {display:none}
+.row {
+  width: auto;
+  z-index: 8888;
+  position: absolute;
+  right: 62px;
+}
+#ham{
+  background-color: aqua;
+  border-radius: 50%;
+}

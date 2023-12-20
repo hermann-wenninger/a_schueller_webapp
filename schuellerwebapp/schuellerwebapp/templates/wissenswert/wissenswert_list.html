@@ -63,7 +63,17 @@
     align-self: baseline;
     font-weight:100;
     }
-   
+    a.aktbutt {
+        margin: 1.5em;
+        border-radius: 25px;
+        background-color: #acaca8;
+        align-self: center;
+        color: white;
+        padding: 1em;
+    }
+    a.aktbutt:hover{
+        background-color:#afb9c1;
+    }
 </style>
 <div class="fenster">
 {% for c in wissenswert_list %}
@@ -72,7 +82,7 @@
     <div class='right'>
         <h1>{{c.ueberschrift_1}}</h1><br>
       <div class="fltext">  {{c.text_1 |truncatewords:60}}</div>
-    <a href="{% url 'wissenswert:wissenswert-detail' c.id %}">more</a>
+    <a class="aktbutt" href="{% url 'wissenswert:wissenswert-detail' c.id %}">mehr zum Thema</a>
     </div>
 
 

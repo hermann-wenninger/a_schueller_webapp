@@ -63,6 +63,17 @@
     align-self: baseline;
     font-weight:100;
     }
+    a.aktbutt {
+        margin: 1.5em;
+        border-radius: 25px;
+        background-color: #acaca8;
+        align-self: center;
+        color: white;
+        padding: 1em;
+    }
+    a.aktbutt:hover{
+        background-color:#afb9c1;
+    }
    
 </style>
 <div class="fenster">
@@ -71,8 +82,8 @@
     <div class='left'><img class="aktuellesimg" src="{{c.image.url}}" alt="Bild zu{{c.ueberschrift}}"></div>
     <div class='right'>
         <h1>{{c.ueberschrift}}</h1><br>
-      <div class="fltext">  {{c.beschreibung}}</div>
-    <a href="{% url 'aktuelles:aktuelles-detail' c.id %}">more</a>
+      <div class="fltext">  {{c.beschreibung |truncatewords:60}}</div>
+    <a class="aktbutt" href="{% url 'aktuelles:aktuelles-detail' c.id %}">mehr zum Thema</a>
     </div>
 
 

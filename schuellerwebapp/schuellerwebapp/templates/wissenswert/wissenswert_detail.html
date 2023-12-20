@@ -46,22 +46,28 @@
         font-size:2.9em;
         align-self: baseline;
     }
-    .fltext{
-    font-size: .9em;
-    font-family: Helvetica;
-    font-palette: light;
-    font-optical-sizing: inherit;
-    font-feature-settings: normal;
-    font-kerning: normal;
-    font-stretch: condensed;
-    font-synthesis-style: inherit;
-    font-variant: petite-caps;
-    font-variant-numeric: lining-nums;
-    font-stretch: expanded;
-    line-height: 1.5;
-    width:95%;
+    .fltext {
+        font-size: .9em;
+        font-family: Helvetica;
+        font-palette: light;
+        font-optical-sizing: inherit;
+        font-feature-settings: normal;
+        font-kerning: normal;
+        font-stretch: condensed;
+        font-synthesis-style: inherit;
+        font-variant: petite-caps;
+        font-variant-numeric: lining-nums;
+        font-stretch: expanded;
+        line-height: 1.5;
+        width: 95%;
+        align-self: baseline;
+        font-weight: 100;
+        margin-bottom: 1.4em;
+    }
+    .wissenmiddle{
+    font-size: x-large;
+    margin-top: .7em;
     align-self: baseline;
-    font-weight:100;
     }
 </style>
 <div class="fenster">
@@ -71,7 +77,7 @@
     <div class='right'>
         <h1>{{wissenswert.ueberschrift_1}}</h1><br>
       <div class="fltext">  {{wissenswert.text_1}}</div>
-      <h2>{{wissenswert.ueberschrift_2}}</h2><br>
+      <h2 class="wissenmiddle">{{wissenswert.ueberschrift_2}}</h2><br>
       <div class="fltext">  {{wissenswert.text_2}}</div>
     
     </div>
