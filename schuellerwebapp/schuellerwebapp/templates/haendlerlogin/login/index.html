@@ -13,16 +13,17 @@ PDF
       line-height: 1;
       text-decoration: none;
       color: #9b9b9b;
-      font-size: 18px;
+      font-size: 16px;
       border-radius: 50px;
-      width: 100px;
-      height: 100px;
-      font-weight: bold;
+      width: 200px;
+      height: 70px;
+      font-weight: 600;
       transition: 0.3s;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
       background-image: linear-gradient(180deg, rgba(245, 245, 245, 1), rgba(204, 204, 204, 1));
       margin:1em;
-    }
+      text-align:center;
+  }
     
     .button:hover {
       transform: translateY(2px);
@@ -35,18 +36,34 @@ PDF
       justify-content: space-around;
       height: 100vh;
       width:100vw;
+      background-color: ghostwhite;
   }
   .inner {
     display: inline-flex;
     justify-content: center;
+    flex-wrap:wrap;
+}
+h2{
+  margin-bottom:-400px;
+  font-family:monospace;
+  font-size:1.5em;
+  font-weight:600;
+  padding: 1em;
+  border-radius: 50px;
+  margin-top:-3em;
+}
+.outerrim {
+  margin-top: -10em;
 }
 </style>
 <div class="outer">
+  <h2>Downloadbereich</h2>
     <div class="inner">
-    <button class="button">EK- / VK- Listexx</button>
-    <button class="button">VK- Liste</button>
-    <a href="{{pdf.doc2}}" class="btn btn-primary">VK - Liste/a>
-    <a href="{% url 'haendlerlogin:broschuere' %}" class="btn btn-primary">Broschüre</a>
+     
+    
+    <a class='button' href="{% url 'haendlerlogin:pdf_view' %}" class="btn btn-primary">Preisliste VK</a>
+    <a class="button" href="{% url 'haendlerlogin:pdf_viewx' %}" class="btn btn-primary">Preisliste EK-VK</a>
+    <a class="button" href="{% url 'haendlerlogin:pdf_viewy' %}" class="btn btn-primary">Imagebroschüre</a>
     </div>
 </div>
 {% endblock %}

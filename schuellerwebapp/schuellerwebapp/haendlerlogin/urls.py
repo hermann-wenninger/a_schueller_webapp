@@ -1,15 +1,14 @@
 from django.contrib import admin 
 from django.urls import path
 
-from .views import login, download_broschuere, download_vk, download_ekvk
+from .views import login, pdf_view, pdf_viewx, pdf_viewy
 
 app_name='haendlerlogin'
 
 urlpatterns  =  [ 
     path ("haendlerlogin/", login, name="login" ), 
-    path ("download_broschuere/", download_broschuere, name="broschuere" ), 
-    path ("download_vk/", download_vk, name="vk" ), 
-    path ("download_ekvk/", download_ekvk, name="ekvk" ), 
-    #path ("pdf/", login, name="nachlogin" ),
-    
-]
+    path ("download/", pdf_view, name="pdf_view" ),
+    path ("downloadx/", pdf_viewx, name="pdf_viewx" ), 
+    path ("downloady/", pdf_viewy, name="pdf_viewy" ), 
+  
+    ]
