@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-  Händlerlogin
+ Kontaktformular
 {% endblock %}
 
 {% block content %}
@@ -19,14 +19,15 @@
         justify-content: space-evenly;
         align-items: center;
         width:100vw;
+        margin-bottom: -12em;
     }
-    input#id_from_email {
+    input#id_emailadresse {
         padding: 6px;
         font-size: 14px;
         border-width: 2px;
         border-color: #da2727;
         background-color: #FFFFFF;
-        color: #000000;
+        color: white;
         border-style: solid;
         border-radius: 5px;
         box-shadow: 0px 0px 12px rgba(66,66,66,.79);
@@ -40,7 +41,7 @@
         border-width: 2px;
         border-color: #da2727;
         background-color: #FFFFFF;
-        color: #000000;
+        color: white;
         border-style: solid;
         border-radius: 5px;
         box-shadow: 0px 0px 12px rgba(66,66,66,.79);
@@ -54,7 +55,7 @@
         border-width: 2px;
         border-color: #da2727;
         background-color: #FFFFFF;
-        color: #000000;
+        color: white;
         border-style: solid;
         border-radius: 5px;
         box-shadow: 0px 0px 12px rgba(66,66,66,.79);
@@ -62,13 +63,13 @@
         width:300px;
         margin:0.3em;
     }
-    textarea#id_message{
+    textarea#id_nachricht{
         padding: 6px;
         font-size: 14px;
         border-width: 2px;
         border-color: #da2727;
         background-color: #FFFFFF;
-        color: #000000;
+        color: white;
         border-style: solid;
         border-radius: 5px;
         box-shadow: 0px 0px 12px rgba(66,66,66,.79);
@@ -79,6 +80,7 @@
     label {
         font-family: monospace;
         margin-top: 1em;
+        color:white;
     }
     .button{
         background-color: #bf0404;
@@ -94,6 +96,7 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        position:absolute;
        }
        .button span{
         margin-right: 15px;
@@ -120,7 +123,7 @@
     {% csrf_token %}
     {{ form.as_p }}
     <div class="form-actions">
-      <button class="button" type="submit">Send</button>
+      <button class="button" type="submit">Abschicken</button>
     </div>
 </form>
 </div>
