@@ -261,7 +261,7 @@ body{
     justify-content:center;
     font-family:monospace;
     font-size: 1.2em;
-    margin-top: 8em;
+    margin-top: .1em;
     background-color: #fff;
     z-index: 9999;
     padding:.5em;
