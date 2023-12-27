@@ -47,7 +47,7 @@
     font-family: "JustlefthandWeb W03 Regular";
   }
   
-  /* Number text (1/3 etc) */
+
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -56,25 +56,16 @@
     top: 0;
   }
   
-  /* The dots/bullets/indicators */
+  
   .dot {
     height: 15px;
     width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+   background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+   transition: background-color 0.6s ease;
     position:relative;
-    bottom:20px;
-    z-index:9999;
-  }
-  
-  .active {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
+    margin-left:0.2em;
+   
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -98,7 +89,7 @@
   @media only screen and (min-width: 400px) {
     .mySlides.fade {
      transform:rotate(360deg);
-   }
+   }}
    .dotliner {
     display: flex;
 }
@@ -108,8 +99,260 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-direction: column;
+  flex-direction: row;
   margin-top:2em;
+}
+  </style>
+  <style>
+  figcapture:hover{
+      opacity: 1;
+        transition: opacity 0.5s ease-in 0.6s;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      margin-top: 50px;
+    }
+    .grid figure {
+      margin: .1rem;
+      position: relative;
+    }
+    .grid figure figcaption {
+      background: #f8011e;
+      bottom: 0;
+      box-sizing: border-box;
+      position: absolute;
+      width: 100%;
+      padding: 1rem;
+      -webkit-transition: all 0.2s cubic-bezier(1, 0.24, 0, 0.76);
+      overflow: hidden;
+      rotate: 270deg;
+      font-size: 1.3em;
+    }
+    .grid figure p {
+      margin-top: 0.5rem;
+    }
+    .grid img {
+      width: 300px;
+      height: 300px;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+    
+    /*@media screen and (min-width: 701px) {*/
+      figure {
+        width: 300px;
+      }
+      figure figcaption {
+        height: 50px;
+        font-size: 3em;
+        color:rgba(236, 241, 241, 0.531);
+       
+      }
+      figure:hover figcaption {
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        height: 100%;
+        opacity: .7;
+        transition: height 0.5s ease-in;
+        font-size: 2em;
+      }
+      figure:hover p {
+        opacity: 1;
+        transition: opacity 0.5s ease-in 0.6s;
+      }
+    
+      p {
+        font-family: JustlefthandWeb W03 Regular;
+        opacity: 0;
+        font-size: 1.4em;
+        font-weight:300;
+      }
+      figcaption{
+        opacity: 0.0;
+        font-family: JustlefthandWeb W03 Regular;
+        font-size: 2em;
+        font-weight: 600;
+    
+      }
+      @media screen (min-width: 638px) {
+    img figure{
+      width:38vw;
+    }
+      }
+    /*@media screen and (max-width: 700px) {
+      figure {
+        width: 100%;
+      }
+    
+      p {
+        opacity: 1;
+      }
+    
+      figcaption {
+        height: auto;
+        opacity: .0;
+        
+      }
+    }*/
+    figure {
+      -webkit-animation: grid 1.5s ;
+              animation: grid 1.5s ;
+    }
+    @-webkit-keyframes grid {
+      0% {
+        -webkit-transform: scale(.950);
+                transform: scale(.950);
+        
+        margin:25px;
+       
+      
+      }
+     
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        
+        margin:2px;
+        
+      }
+    }
+    @keyframes grid {
+      0% {
+        -webkit-transform: scale(.987);
+                transform: scale(.987);
+        
+        margin:12px;
+      }
+      97%{
+        margin:2px;
+      }
+      98%{
+        margin:1px;
+      }
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        
+        margin:2px;
+        
+      }
+    }
+    
+  
+    img{
+      border: none;
+    }
+  div.longline {
+  width: 100vw;
+  font-family: monospace;
+  margin-left: 100px;
+  z-index: 888;
+  margin-top:-4em;
+  margin-bottom:-2em;
+  }
+
+  .fenster {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 120px;
+    font-family: monospace;
+    height:auto;
+}
+.aktuelles{
+    background-color: #f6f7f8;
+    border-radius:7px;
+    width:90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom:2em;
+}
+.right {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: flex-start;
+}
+img.aktuellesimg{
+    height: 350px;
+    border-radius: 7px;
+    max-width:350px;
+}
+h1{
+    margin-top:1em;
+    font-size:2.9em;
+    align-self: baseline;
+}
+.fltext{
+font-size: .9em;
+font-family: Helvetica;
+font-palette: light;
+font-optical-sizing: inherit;
+font-feature-settings: normal;
+font-kerning: normal;
+font-stretch: condensed;
+font-synthesis-style: inherit;
+font-variant: petite-caps;
+font-variant-numeric: lining-nums;
+font-stretch: expanded;
+line-height: 1.5;
+width:95%;
+align-self: baseline;
+font-weight:100;
+}
+a.aktbutt {
+    margin: 1.5em;
+    border-radius: 25px;
+    background-color: #acaca8;
+    align-self: center;
+    color: white;
+    padding: 1em;
+}
+a.aktbutt:hover{
+    background-color:#afb9c1;
+}
+.innerdot{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background-color:white;
+}
+.dot{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+
+}
+.active {
+  background-color: #ec0c65;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  align-self:center;
+  align-content:center;
+}
+.arounddotliner {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.dotliner {
+  display: flex;
+  margin-top: 1em;
 }
   </style>
   <div class="slideshow-container">
@@ -130,7 +373,7 @@
   <div class="arounddotliner">
   <div class="dotliner" style="text-align:center">
     {% for c in indexslider %}
-    <span class="dot"></span> 
+    <span class="dot"><div class="innerdot"></div></span> 
     {% endfor %}
   </div>
   </div>
@@ -155,5 +398,36 @@
       setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
     </script>
+    <div class="grid animation">
+      <div class="longline"> <h1 class="head">Kollektionen:</h1> </div>
+          {% for c in categories %}
+          <figure>
+             {% if category.slug == c.slug %}{% endif %}
+            <img src="{{ c.image.url }}">
+            <a href="{{ c.get_absolute_url }}"><figcaption>{{ c.name }}</figcaption></a>
+          </figure>
+          {% endfor %}
+        </div>
+      </div>
+
+
+
+
+
+
+<div class="fenster">
+  {% for c in aktuelles %}
+  <div class="aktuelles">
+      <div class='left'><img class="aktuellesimg" src="{{c.image.url}}" alt="Bild zu{{c.ueberschrift}}"></div>
+      <div class='right'>
+          <h1>{{c.ueberschrift}}</h1><br>
+        <div class="fltext">  {{c.beschreibung |truncatewords:60}}</div>
+      <a class="aktbutt" href="{% url 'aktuelles:aktuelles-detail' c.id %}">mehr zum Thema</a>
+      </div>
+  
+  
+  </div>
+  {% endfor %}
+  </div>
     
 {% endblock %}

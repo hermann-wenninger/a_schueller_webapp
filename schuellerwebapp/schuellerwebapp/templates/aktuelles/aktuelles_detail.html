@@ -63,6 +63,13 @@
     align-self: baseline;
     font-weight:100;
     }
+    .alist{
+        font-size:1em;
+        font-size: 1.3em;
+        align-self: baseline;
+        font-weight.700;
+        margin-top:1.2em;
+    }
 </style>
 <div class="fenster">
 
@@ -71,6 +78,12 @@
     <div class='right'>
         <h1>{{aktuelles.ueberschrift}}</h1><br>
       <div class="fltext">  {{aktuelles.beschreibung}}</div>
+      <ul class="alist">
+    <li>{{aktuelles.termin_von}}</li>
+    <li>{{aktuelles.location}}</li>
+    <li> {{aktuelles.plz}} {{aktuelles.in_stadt}}</li>
+    <li> {{aktuelles.strasse_hnr}}</li>
+      </ul>
     
     </div>
 

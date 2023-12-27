@@ -29,16 +29,7 @@ def success(request):
 
 #def product_list(request, kollektion_slug=None):
  #   kollektion = None
-  #  kollektionen = Kollektion.objects.all()
-   # rings = Ring.objects.filter(available=True)
-    #if kollektion_slug:
-     #   kollektion = get_object_or_404(Kollektion, slug=kollektion_slug)
-      #  rings = rings.filter(kollektion=kollektion)
-    #return render(request,
-     #             'kollektion/ring/list.html',
-      #            {'kollektion': kollektion,
-       #            'kollektionen': kollektionen,
-        #           'rings': rings})
+
 
 def ring_list(request, category_slug=None):
     category = None
