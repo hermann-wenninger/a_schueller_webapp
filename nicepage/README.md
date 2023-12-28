@@ -1,1 +1,0 @@
-#### möglicher mittelteil auf erster seite
