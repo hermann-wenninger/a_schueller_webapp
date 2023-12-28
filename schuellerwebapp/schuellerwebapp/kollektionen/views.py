@@ -11,20 +11,22 @@ def contactView(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data["subject"]
+            x = form.cleaned_data["subject"]
+            subject = x + ' ### letzte Kollektion: ' + request.session["0"]
             from_email = form.cleaned_data["email"]
             message = form.cleaned_data['nachricht']
-            kollektion = form.cleaned_data['kollektion']
+           
             try:
-                send_mail(subject, message, from_email, ["admin@example.com"])
+                print('email',request.session["0"])
+                send_mail(subject, message, from_email,["admin@example.com"])
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")
-            return redirect('sendemail:success')
+            return redirect('kollektionen:success')
             #return redirect("success")
     return render(request, "kollektionen/email.html", {"form": form})
 
 def success(request):
-    return HttpResponse("Danke für Ihre Nachricht, Sie bekommen baldmöglichst eine Antwort")
+    return render(request, "kollektionen/succes.html")
 
 
 
@@ -40,6 +42,8 @@ def ring_list(request, category_slug=None):
         category = get_object_or_404(Kollektion, 
                                      slug=category_slug)
         products = products.filter(category=category)
+        request.session['koll'] = category.name
+        print(request.session[0])
     return render(request,
                   'kollektionen/ring/list.html',
                   {'category': category,
@@ -57,6 +61,8 @@ def ring_listx(request, category_slug=None):
         products = products.filter(category=category)
         count = products.count()
         count = {i+1: i+1 for i in range(count)}
+        request.session[0] = category.name
+        print(request.session[0])
     return render(request,
                   'kollektionen/ring/list1.html',
                   {'category': category,

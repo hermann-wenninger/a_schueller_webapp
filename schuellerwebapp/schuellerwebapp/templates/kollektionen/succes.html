@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Email abgeschickt
+{% endblock %}
+
+{% block content %}
+<style>
+    .outermail {
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        font-family:monospace;
+        font-size:1.1em;
+    }
+</style>
+
+
+<div class="outermail">
+    <div class="innermail">
+<h1>Ihre E-Mail wurde erfolgreich versendet, sie bekommen baldmöglichst eine Antwort</h1>
+</div>
+</div>
+{% endblock %}

@@ -7,4 +7,5 @@ urlpatterns = [
     path('kollektion/<int:id>/<slug:slug>/', views.ring_detail,name='ring_detail'),
     path('kollektion/<slug:category_slug>/', views.get_rings,name='rings'),
     path('kollektion/', views.contactView,name='contactView'),
+     path ("success/", views.success , name="success" ),
 ]
