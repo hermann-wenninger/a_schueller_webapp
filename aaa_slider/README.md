@@ -1,3 +1,0 @@
-# pure-css-js-slider
-
-
