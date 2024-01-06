@@ -1,6 +1,7 @@
 body{
     background-color: rgb(255, 255, 255);
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap');
 @font-face{
     font-family: "JustlefthandWeb W03 Regular";
     src: url("a.eot");
@@ -88,7 +89,7 @@ body{
     }
     .navlink {
       margin: 0.3em;
-      font-family: monospace;
+      font-family: 'Noto Sans', sans-serif;
       color:black;
   }
   .navlink:hover {
@@ -161,7 +162,7 @@ body{
     color: inherit;
     text-decoration: none;
     outline: none;
-    font-family: monospace;
+    font-family: 'Noto Sans', sans-serif;
   }
   
   .label {
@@ -209,6 +210,8 @@ body{
   }
   a.navlink:hover {
   color: black;
+  font-weight: 500;
+  font-style: italic;
   }
   .texto{
   position:absolute;
@@ -223,17 +226,17 @@ body{
   position: relative;
   top: 110px;
   left: -90px;
-  font-family: inherit;
+  font-family: 'Noto Sans', sans-serif;
   font-size: .8em;
   }
   .navlogo{
     width: 280px;
-    margin-right: 1em;
     position: absolute;
-    left: 52px;
+    left: 30px;
+  
   }
   .lang{
-    font-family: monospace;
+    font-family: 'Noto Sans', sans-serif;
     color:rgb(121, 123, 132);
     font-size: 1em;
   }
@@ -259,7 +262,7 @@ body{
     display:flex;
     flex-direction: row;
     justify-content:center;
-    font-family:monospace;
+    font-family:'Noto Sans', sans-serif;
     font-size: 1.2em;
     margin-top: .1em;
     background-color: #fff;
@@ -319,7 +322,7 @@ body{
   .line { 
     position: absolute; 
     left:10px;
-    height: 4px; width: 55px; 
+    height: 6px; width: 55px; 
     background: #171616; border-radius: 2px;
     display: block; 
     transition: 0.5s; 
@@ -360,11 +363,15 @@ input#hamburg {display:none}
   right: 62px;
 }
 #ham{
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   z-index: 99999;
   width: 50px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
 }
 .outerrim:hover {
   box-shadow: 15px 15px 17px 17px rgb(155 150 150 / 53%);

@@ -28,18 +28,15 @@
 </head>
   <body>
     <nav id="nav" class="nav">
-
-
-      
-      <img class="navlogo" src="{% static "img/schueller_logo.png" %}" alt="firmenlogo schueller-design" />
-        <a class="navlink" href="{% url 'indexslider:index' %}">Home</a>
-        <a class="navlink" href="{% url 'kollektionen:ring_list' %}">Kollektionen</a>
-        <a class="navlink" href="{% url 'aktuelles:aktuell' %}">Aktuell</a>
-        <a class="navlink" href="{% url 'sendemail:contact' %}">Kontakt</a>
-        <a class="navlink" href="{% url 'atelier:atelier' %}">Atelier</a>
-        <a class="navlink" href="{% url 'wissenswert:wissenswert' %}">Wissenswertes</a>
-        <a class="navlink" href="{% url 'adresses:adresses' %}">Händler</a>
-        <a class="navlink" href="{% url 'haendlerlogin:login' %}">Händlerlogin</a>
+<img class="navlogo" src="{% static "img/schueller_logo.png" %}" alt="firmenlogo schueller-design" />
+        <a class="navlink aaa" href="{% url 'indexslider:index' %}">Home</a>
+      <!--  <a class="navlink aaa" href="{% url 'kollektionen:ring_list' %}">Kollektionen</a>-->
+        <a class="navlink aaa" href="{% url 'aktuelles:aktuell' %}">Aktuell</a>
+        <a class="navlink aaa" href="{% url 'sendemail:contact' %}">Kontakt</a>
+        <a class="navlink aaa" href="{% url 'atelier:atelier' %}">Atelier</a>
+        <a class="navlink aaa" href="{% url 'wissenswert:wissenswert' %}">Wissenswertes</a>
+        <a class="navlink aaa" href="{% url 'adresses:adresses' %}">Händler</a>
+        <a class="navlink aaa" href="{% url 'haendlerlogin:login' %}">Händlerlogin</a>
        
         <div id="myNav" class="overlay">
           <div class="overlay-content">
@@ -66,6 +63,7 @@
             </div>
             <img class="navlogo" src="{% static "img/schueller_logo.png" %}" alt="firmenlogo schueller-design" />
           </div>
+         
         </div>
         <div class="row" id="ham">
           <input type="checkbox" id="hamburg">
@@ -117,12 +115,15 @@
   </div>
   <script>
    
-   let x =  document.getElementById('hamburg')
+   let x =  document.getElementById('hamburg');
    x.onclick = function() {
       console.log('hamburg click for');
       document.getElementById('myNav').classList.toggle('active');}
       
-  
+      let xy =  document.getElementById('ham');
+      xy.onclick = function() {
+         console.log('hamburg click for');
+         document.getElementById('myNav').classList.toggle('active');}
   
   </script>
   <style>
@@ -138,7 +139,7 @@
       left: 0;
       top: 0;
       height: 100vh;
-      background-color: #f0f8fff2;
+      background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-content: center;

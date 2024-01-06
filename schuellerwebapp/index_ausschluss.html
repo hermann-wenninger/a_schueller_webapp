@@ -76,16 +76,24 @@
     to {opacity: 1}
   }
   
-  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
   object{
     position:absolute;
     top:100px;
     left:100px;
     z-index:999;
   }
+  @media only screen and (min-width: 400px) {
+    .mySlides.fade {
+     transform:rotate(360deg);
+   }}
 
 
-
+  </style>
+  <style>
   figcapture:hover{
       opacity: 1;
         transition: opacity 0.5s ease-in 0.6s;
@@ -124,7 +132,7 @@
          object-fit: cover;
     }
     
-  
+    /*@media screen and (min-width: 701px) {*/
       figure {
         width: 300px;
       }
@@ -161,8 +169,26 @@
         font-weight: 600;
     
       }
-  
-  
+      @media screen (min-width: 638px) {
+    img figure{
+      width:38vw;
+    }
+      }
+    /*@media screen and (max-width: 700px) {
+      figure {
+        width: 100%;
+      }
+    
+      p {
+        opacity: 1;
+      }
+    
+      figcaption {
+        height: auto;
+        opacity: .0;
+        
+      }
+    }*/
     figure {
       -webkit-animation: grid 1.5s ;
               animation: grid 1.5s ;
@@ -286,6 +312,12 @@ a.aktbutt {
 a.aktbutt:hover{
     background-color:#afb9c1;
 }
+.innerdot{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background-color:white;
+}
 .dot{
   display:flex;
   justify-content:center;
@@ -314,20 +346,24 @@ a.aktbutt:hover{
 }
   </style>
   <div class="slideshow-container">
-{% for c in indexslider %}
+
+   
+    
+ {% for c in indexslider %}
  <div class="mySlides fade" style="background-image:url({{c.image.url}})">
   <div class="numbertext">1 / 3</div>
   <img src=""  style="width:vw" >
   <div class="text">{{ c.name }}</div>
  </div>
-    {% endfor %}
- 
+    
+ {% endfor %}
+ <img class="logo_z" src="{% static "img/logo4.svg" %}" alt="firmenlogo schueller-design" />
  
   </div>
   <div class="arounddotliner">
   <div class="dotliner" style="text-align:center">
     {% for c in indexslider %}
-    <span class="dot"></span> 
+    <span class="dot"><div class="innerdot"></div></span> 
     {% endfor %}
   </div>
   </div>

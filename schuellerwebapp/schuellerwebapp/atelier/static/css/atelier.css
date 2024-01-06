@@ -37,7 +37,7 @@ audio:not([controls]) {
 }
 
 button,html,input,select,textarea {
-    font-family: sans-serif
+    font-family: 'Noto Sans', sans-serif;
 }
 
 a:active,a:focus,a:hover {
@@ -92,12 +92,12 @@ mark {
 }
 
 code,kbd,pre,samp {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 1em
 }
 
 .sidebar .ui-button-close,body {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 pre {
@@ -329,7 +329,7 @@ small {
 
 a:hover kbd,kbd {
     border-bottom: dotted 1px;
-    font-family: inherit;
+    font-family: 'Noto Sans', sans-serif;
     font-size: inherit
 }
 
@@ -2760,7 +2760,7 @@ body.fallback::after {
 }
 
 .-text-heading,.-text-title {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 48px;
     line-height: 1.125;
     font-weight: 400;
@@ -2775,10 +2775,10 @@ body.fallback::after {
 .-text-title {
     margin-top: 0.5em;
     font-size: 3em;
-    font-family: monospace;
+    font-family: 'Noto Sans', sans-serif;
 }
 .-text-subheading {
-    font-family: monospace;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 1.125rem;
     font-weight: 400
 }
